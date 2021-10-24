@@ -96,3 +96,6 @@ Native/DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+/Unity/com.kyrylokuzyk.arfoundationremote
+/Unity/ARFoundationRemoteInstaller
