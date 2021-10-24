@@ -55,17 +55,17 @@ PrefabInstance:
     - target: {fileID: 1649529084648102441, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.x
-      value: 38.35771
+      value: -110.43001
       objectReference: {fileID: 0}
     - target: {fileID: 1649529084648102441, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.y
-      value: 3.974121
+      value: 115.52903
       objectReference: {fileID: 0}
     - target: {fileID: 1649529084648102441, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.z
-      value: 59.494537
+      value: 64.85658
       objectReference: {fileID: 0}
     - target: {fileID: 1649529085236753054, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
@@ -130,17 +130,17 @@ PrefabInstance:
     - target: {fileID: 1649529085416684042, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.x
-      value: 41.777725
+      value: -107.009995
       objectReference: {fileID: 0}
     - target: {fileID: 1649529085416684042, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.y
-      value: 3.974121
+      value: 115.52903
       objectReference: {fileID: 0}
     - target: {fileID: 1649529085416684042, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.z
-      value: 61.161377
+      value: 66.52342
       objectReference: {fileID: 0}
     - target: {fileID: 1649529085636780089, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
@@ -260,17 +260,22 @@ PrefabInstance:
     - target: {fileID: 1649529085700661202, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.x
-      value: 40.277077
+      value: -108.51064
       objectReference: {fileID: 0}
     - target: {fileID: 1649529085700661202, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.y
-      value: 3.974121
+      value: 115.52903
       objectReference: {fileID: 0}
     - target: {fileID: 1649529085700661202, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.z
-      value: 58.43722
+      value: 63.799267
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649529085862169861, guid: b9a717f48a878014eace6ca32ea4f360,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1649529086023744406, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
@@ -320,17 +325,17 @@ PrefabInstance:
     - target: {fileID: 1649529086023744406, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.x
-      value: 39.85836
+      value: -108.92936
       objectReference: {fileID: 0}
     - target: {fileID: 1649529086023744406, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.y
-      value: 3.974121
+      value: 115.52903
       objectReference: {fileID: 0}
     - target: {fileID: 1649529086023744406, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
       propertyPath: wheel.worldPosition.z
-      value: 62.21869
+      value: 67.580734
       objectReference: {fileID: 0}
     - target: {fileID: 4171782249007892820, guid: b9a717f48a878014eace6ca32ea4f360,
         type: 3}
@@ -586,6 +591,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7428802089837553772}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &8213481408284271977 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 1649529085862169861, guid: b9a717f48a878014eace6ca32ea4f360,
+    type: 3}
+  m_PrefabInstance: {fileID: 7428802089837553772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1070822932083639967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,3 +621,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810d5e82550294b978189ef96921e427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collider: {fileID: 8213481408284271977}

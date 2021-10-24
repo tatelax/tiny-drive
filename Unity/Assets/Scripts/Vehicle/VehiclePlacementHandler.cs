@@ -8,6 +8,8 @@ namespace Vehicle
     [RequireComponent(typeof(VehicleController))]
     public class VehiclePlacementHandler : MonoBehaviour
     {
+        [SerializeField] private Collider collider;
+        
         private Rigidbody rb;
         private VehicleController vehicleController;
         
@@ -15,6 +17,14 @@ namespace Vehicle
         {
             rb = GetComponent<Rigidbody>();
             vehicleController = GetComponent<VehicleController>();
+
+            if (!collider)
+            {
+                Debug.LogError("Collider not assigned");
+                return;
+            }
+
+            collider.isTrigger = true;
         }
 
         public void Release()
@@ -22,6 +32,7 @@ namespace Vehicle
             rb.constraints = RigidbodyConstraints.None;
             rb.useGravity = true;
             vehicleController.Wake();
+            collider.isTrigger = false;
             
             Debug.Log($"Vehicle released {gameObject.name}");
         }
