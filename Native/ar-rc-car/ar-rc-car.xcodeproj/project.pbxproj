@@ -13,7 +13,23 @@
 		783F0BB1272393640087AE0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783F0BAF272393640087AE0A /* Main.storyboard */; };
 		783F0BB3272393660087AE0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783F0BB2272393660087AE0A /* Assets.xcassets */; };
 		783F0BB6272393660087AE0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783F0BB4272393660087AE0A /* LaunchScreen.storyboard */; };
+		783F0BBF2723C53F0087AE0A /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783F0BBE2723C53F0087AE0A /* UnityFramework.framework */; };
+		783F0BC02723C53F0087AE0A /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 783F0BBE2723C53F0087AE0A /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		783F0BC12723C53F0087AE0A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				783F0BC02723C53F0087AE0A /* UnityFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		783F0BA6272393640087AE0A /* ar-rc-car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ar-rc-car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		783F0BB2272393660087AE0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		783F0BB5272393660087AE0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		783F0BB7272393660087AE0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783F0BBE2723C53F0087AE0A /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783F0BBF2723C53F0087AE0A /* UnityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				783F0BA8272393640087AE0A /* ar-rc-car */,
 				783F0BA7272393640087AE0A /* Products */,
+				783F0BBD2723C53F0087AE0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,14 @@
 			path = "ar-rc-car";
 			sourceTree = "<group>";
 		};
+		783F0BBD2723C53F0087AE0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				783F0BBE2723C53F0087AE0A /* UnityFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +104,7 @@
 				783F0BA2272393640087AE0A /* Sources */,
 				783F0BA3272393640087AE0A /* Frameworks */,
 				783F0BA4272393640087AE0A /* Resources */,
+				783F0BC12723C53F0087AE0A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9e0bdb9718f72472f8096ede07490a1f
+  m_SerializeEntries:
+  - m_GUID: bfba7fa4f9dfd4240bcb0b6dbedeedd2
+    m_Address: Assets/Prefabs/Vehicles/MonsterTruck.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2cbf2544582774f3da22469a0dc39b90, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9d4950ab4d4c54f7b842e0ca97df3a09, type: 2}
+    - {fileID: 11400000, guid: 4fdec806c88494bc8b919189252308f0, type: 2}
