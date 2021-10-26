@@ -17,9 +17,9 @@ MonoBehaviour:
     cameraVideoSettings:
       enableVideo: 1
       syncCameraPoseWithVideo: 1
-      resolutionScale: 1
-      quality: 100
-      maxVideoFps: 30
+      resolutionScale: 0.2068
+      quality: 45
+      maxVideoFps: 15
       maxCpuImagesFps: 30
       maxCameraIntrinsicsFps: 1
     occlusionSettings:
@@ -30,13 +30,13 @@ MonoBehaviour:
       sendVertices: 1
       sendNormals: 1
       sendARKitBlendshapes: 1
-    CPUImagePlaneMode: 0
+    CPUImagePlaneMode: 2
     maxLatency: 0.5
     latencyReduceSpeed: 0.5
     normalLatency: 0.2
     targetFrameRate: 30
   editorGameViewSettings:
-    resolutionScale: 1
+    resolutionScale: 0.2374
     maxEditorViewFps: 30
   packages:
   - displayName: AR Foundation Remote
@@ -86,13 +86,13 @@ MonoBehaviour:
       e33: 1
     overrideProjectionMatrix: 0
     projectionMatrix:
-      e00: 3.4782777
+      e00: 3.4870338
       e01: 0
-      e02: 0.0018615723
+      e02: -0.002043724
       e03: 0
       e10: 0
-      e11: 1.6063474
-      e12: 0.02264893
+      e11: 1.6103913
+      e12: 0.02260685
       e13: 0
       e20: 0
       e21: 0

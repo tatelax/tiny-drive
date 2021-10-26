@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Vehicles/MonsterTruck.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a9386c8dd5bb248d7ac68bb92f20ad8d
+    m_Address: Assets/Prefabs/TrackObjs/Coin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2cbf2544582774f3da22469a0dc39b90, type: 2}
   m_SchemaSet:
