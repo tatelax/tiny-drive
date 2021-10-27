@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/TrackObjs/Coin.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bff890dac0dce40d39c574d2c45a24fc
+    m_Address: Assets/Prefabs/TrackObjs/Ramp.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2cbf2544582774f3da22469a0dc39b90, type: 2}
   m_SchemaSet:

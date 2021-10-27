@@ -1,9 +1,10 @@
 using Gameplay;
+using UI;
 using UnityEditor;
 using UnityEditor.UI;
 using UnityEngine;
 
-[CustomEditor(typeof(TrackObjectButton))]
+[CustomEditor(typeof(PointerTrackingButton))]
 [CanEditMultipleObjects]
 public class TrackObjectButtonEditor : ButtonEditor
 {
@@ -11,7 +12,7 @@ public class TrackObjectButtonEditor : ButtonEditor
     {
         serializedObject.Update();
 
-        TrackObjectButton targetMyButton = (TrackObjectButton)target;
+        PointerTrackingButton targetMyButton = (PointerTrackingButton)target;
         EditorGUILayout.HelpBox("Custom Data For Spawning Track Objects", MessageType.Info);
 
         targetMyButton.DragAmountBeforeSpawn = EditorGUILayout.FloatField("Drag Amount Before Spawn", targetMyButton.DragAmountBeforeSpawn);

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Gameplay
 {
-    public class ReleaseVehicle : MonoBehaviour
+    public class ReleaseVehicleButton : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private VehiclePlacementManager vehiclePlacementManager;
@@ -13,6 +13,7 @@ namespace Gameplay
 
         private void Start()
         {
+            vehiclePlacementManager.PlaceVehicleEvent += () => { releaseButton.gameObject.SetActive(true);};
             releaseButton.onClick.AddListener(Place);
         }
 

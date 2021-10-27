@@ -11,6 +11,8 @@ namespace Gameplay
         [Header("References")]
         [SerializeField] private VehicleLoadingManager vehicleLoadingManager;
         [SerializeField] private Camera arCamera;
+
+        public event Action PlaceVehicleEvent;
         
         private bool isPlacing = false;
         
@@ -25,6 +27,8 @@ namespace Gameplay
             isPlacing = true;
             
             vehicleLoadingManager.Load(type);
+            
+            PlaceVehicleEvent?.Invoke();
         }
 
         public void StopPlacing()

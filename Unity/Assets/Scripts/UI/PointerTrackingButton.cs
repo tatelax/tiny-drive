@@ -1,14 +1,16 @@
-using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-namespace Gameplay
+namespace UI
 {
-    [AddComponentMenu("Custom/Track Object Button")]
-    public class TrackObjectButton : Button
+    /// <summary>
+    /// Tracks pointer for drag events on click
+    /// </summary>
+    [AddComponentMenu("Custom/Prop Place Button")]
+    public class PointerTrackingButton : Button
     {
         [SerializeField] private string objAddress = null;
         [SerializeField] private float dragAmountBeforeSpawn = 2.0f;
@@ -45,9 +47,10 @@ namespace Gameplay
             base.OnPointerUp(eventData);
             
             if (!Application.isPlaying) return;
+
+            PlaceObject();
             
             isDragging = false;
-            spawnedObj = null;
         }
 
         public void Update()
@@ -82,6 +85,16 @@ namespace Gameplay
             };
         }
 
+        private void PlaceObject()
+        {
+            Vector3 currPos = spawnedObj.transform.position;
+
+            currPos.y -= 2;
+            
+            spawnedObj.transform.position = currPos;
+            spawnedObj = null;
+        }
+        
         private void DestroyObj()
         {
             if (spawnedObj == null) return;

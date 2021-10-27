@@ -36,6 +36,14 @@ namespace Gameplay
                 .Completed += OnCompleted;
         }
 
+        public void Destroy()
+        {
+            Addressables.ReleaseInstance(currVehicle);
+            currVehicle = null;
+            
+            Debug.Log("Destroyed current vehicle.");
+        }
+
         private void OnCompleted(AsyncOperationHandle<GameObject> obj)
         {
             isLoading = false;
