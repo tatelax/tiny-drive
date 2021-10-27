@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
@@ -9,27 +10,22 @@ namespace UI
     /// <summary>
     /// Tracks pointer for drag events on click
     /// </summary>
-    [AddComponentMenu("Custom/Prop Place Button")]
+    [AddComponentMenu("Custom/Pointer Tracking Button")]
     public class PointerTrackingButton : Button
     {
-        [SerializeField] private string objAddress = null;
-        [SerializeField] private float dragAmountBeforeSpawn = 2.0f;
+        [SerializeField] private float requiredDragAmount = 2.0f;
 
-        public float DragAmountBeforeSpawn
+        public event Action OnDragStart;
+        public event Action OnDragStop;
+        
+        public float RequiredDragAmount
         {
-            get => dragAmountBeforeSpawn;
-            set => dragAmountBeforeSpawn = value;
-        }
-
-        public string ObjAddress
-        {
-            get => objAddress;
-            set => objAddress = value;
+            get => requiredDragAmount;
+            set => requiredDragAmount = value;
         }
 
         private bool isDragging;
-        private GameObject spawnedObj = null;
-        private bool isSpawning;
+        private bool didInvoke;
         private Vector2 fingerPosOnDown;
         
         public override void OnPointerDown(PointerEventData eventData)
@@ -47,72 +43,26 @@ namespace UI
             base.OnPointerUp(eventData);
             
             if (!Application.isPlaying) return;
-
-            PlaceObject();
             
             isDragging = false;
+            didInvoke = false;
+            
+            OnDragStop?.Invoke();
         }
 
         public void Update()
         {
             if (!isDragging) return;
+
+            if (didInvoke) return;
             
-            if (spawnedObj == null && Vector2.Distance(fingerPosOnDown, new Vector2(Pointer.current.position.x.ReadValue(), Pointer.current.position.y.ReadValue())) < dragAmountBeforeSpawn)
+            if (Vector2.Distance(fingerPosOnDown, new Vector2(Pointer.current.position.x.ReadValue(), Pointer.current.position.y.ReadValue())) < requiredDragAmount)
             {
                 return;
             }
-
-            if (spawnedObj == null)
-            {
-                SpawnObj();
-            }
-
-            if (spawnedObj)
-            {
-                HandlePlacing();
-            }
-        }
-
-        private void SpawnObj()
-        {
-            if (isSpawning) return;
-            isSpawning = true;
-
-            Addressables.InstantiateAsync(objAddress, Vector3.zero, Quaternion.identity).Completed += handle =>
-            {
-                spawnedObj = handle.Result;
-                isSpawning = false;
-            };
-        }
-
-        private void PlaceObject()
-        {
-            Vector3 currPos = spawnedObj.transform.position;
-
-            currPos.y -= 2;
             
-            spawnedObj.transform.position = currPos;
-            spawnedObj = null;
-        }
-        
-        private void DestroyObj()
-        {
-            if (spawnedObj == null) return;
-
-            Addressables.ReleaseInstance(spawnedObj);
-        }
-        
-        private void HandlePlacing()
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Pointer.current.position.ReadValue());
-
-            if (Physics.Raycast(ray, out var hit))
-            {
-                Vector3 objPos = hit.point;
-                objPos.y += 2f;
-                
-                spawnedObj.transform.position = objPos;
-            }
+            OnDragStart?.Invoke();
+            didInvoke = true;
         }
     }
 }

@@ -6,17 +6,15 @@ using UnityEngine;
 
 [CustomEditor(typeof(PointerTrackingButton))]
 [CanEditMultipleObjects]
-public class TrackObjectButtonEditor : ButtonEditor
+public class PointerTrackingButtonEditor : ButtonEditor
 {
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
         PointerTrackingButton targetMyButton = (PointerTrackingButton)target;
-        EditorGUILayout.HelpBox("Custom Data For Spawning Track Objects", MessageType.Info);
 
-        targetMyButton.DragAmountBeforeSpawn = EditorGUILayout.FloatField("Drag Amount Before Spawn", targetMyButton.DragAmountBeforeSpawn);
-        targetMyButton.ObjAddress = EditorGUILayout.TextField("Object Address", targetMyButton.ObjAddress);
+        targetMyButton.RequiredDragAmount = EditorGUILayout.FloatField("Required Drag Amount", targetMyButton.RequiredDragAmount);
         
         EditorGUILayout.Space();
 
