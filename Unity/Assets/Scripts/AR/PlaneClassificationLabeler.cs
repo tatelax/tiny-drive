@@ -15,6 +15,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
     [RequireComponent(typeof(MeshRenderer))]
     public class PlaneClassificationLabeler : MonoBehaviour
     {
+        [SerializeField] private float textSize = 0.35f;
+        
         ARPlane m_ARPlane;
         MeshRenderer m_PlaneMeshRenderer;
         TextMesh m_TextMesh;
@@ -29,7 +31,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             // Setup label
             m_TextObj = new GameObject();
             m_TextMesh = m_TextObj.AddComponent<TextMesh>();
-            m_TextMesh.characterSize = 0.05f;
+            m_TextMesh.characterSize = textSize;
             m_TextMesh.color = Color.black;
         }
 
