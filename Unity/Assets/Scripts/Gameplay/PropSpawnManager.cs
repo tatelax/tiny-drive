@@ -10,8 +10,9 @@ namespace Gameplay
 {
     public class PropSpawnManager : MonoBehaviour
     {
-        [SerializeField] private List<PropSpawnButtonData> propSpawnButtons;
-
+        [SerializeField] private GameObject propSpawnButtonsHolder;
+        
+        private PropSpawnButtonData[] propSpawnButtons;
         private HashSet<GameObject> spawnedObjects;
 
         private GameObject currentlyPlacing = null;
@@ -20,9 +21,12 @@ namespace Gameplay
         private void Awake()
         {
             spawnedObjects = new HashSet<GameObject>();
-            
-            foreach (PropSpawnButtonData button in propSpawnButtons)
+
+            propSpawnButtons = propSpawnButtonsHolder.GetComponentsInChildren<PropSpawnButtonData>();
+
+            for (int i = 0; i < propSpawnButtons.Length; i++)
             {
+                PropSpawnButtonData button = propSpawnButtons[i];
                 button.PointerTrackingButton.OnDragStart += () =>
                 {
                     SetButtonsInteractable(false);
