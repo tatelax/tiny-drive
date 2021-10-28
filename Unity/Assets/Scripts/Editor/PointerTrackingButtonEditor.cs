@@ -15,6 +15,7 @@ public class PointerTrackingButtonEditor : ButtonEditor
         PointerTrackingButton targetMyButton = (PointerTrackingButton)target;
 
         targetMyButton.RequiredDragAmount = EditorGUILayout.FloatField("Required Drag Amount", targetMyButton.RequiredDragAmount);
+        targetMyButton.HoldDownTime = EditorGUILayout.FloatField("Hold Down Time", targetMyButton.HoldDownTime);
         
         EditorGUILayout.Space();
 

@@ -5,11 +5,13 @@ using UI;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace Gameplay
 {
     public class PropSpawnManager : MonoBehaviour
     {
+        [SerializeField] private ScrollRect propSpawnScrollRect;
         [SerializeField] private GameObject propSpawnButtonsHolder;
         
         private PropSpawnButtonData[] propSpawnButtons;
@@ -18,7 +20,7 @@ namespace Gameplay
         private GameObject currentlyPlacing = null;
         private bool isLoading = false;
         
-        private void Awake()
+        private void Start()
         {
             spawnedObjects = new HashSet<GameObject>();
 
@@ -29,12 +31,14 @@ namespace Gameplay
                 PropSpawnButtonData button = propSpawnButtons[i];
                 button.PointerTrackingButton.OnDragStart += () =>
                 {
+                    propSpawnScrollRect.vertical = false;
                     SetButtonsInteractable(false);
                     SpawnProp(button);
                 };
 
                 button.PointerTrackingButton.OnDragStop += () =>
                 {
+                    propSpawnScrollRect.vertical = true;
                     SetButtonsInteractable(true);
                     PlaceObject();
                 };
@@ -43,7 +47,7 @@ namespace Gameplay
 
         private void SetButtonsInteractable(bool state)
         {
-            for (var i = 0; i < propSpawnButtons.Count; i++)
+            for (var i = 0; i < propSpawnButtons.Length; i++)
             {
                 propSpawnButtons[i].PointerTrackingButton.interactable = state;
             }

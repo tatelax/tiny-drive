@@ -1,9 +1,13 @@
 using System;
+using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.UI.ProceduralImage;
 
 namespace UI
 {
@@ -11,10 +15,14 @@ namespace UI
     /// Tracks pointer for drag events on click
     /// </summary>
     [AddComponentMenu("Custom/Pointer Tracking Button")]
-    public class PointerTrackingButton : Button
+    [RequireComponent(typeof(ProceduralImage))]
+    public class PointerTrackingButton : Button, IDragHandler
     {
         [SerializeField] private float requiredDragAmount = 2.0f;
-
+        [SerializeField] private float holdDownTime = 1f;
+        
+        private ProceduralImage procImg;
+        
         public event Action OnDragStart;
         public event Action OnDragStop;
         
@@ -24,45 +32,60 @@ namespace UI
             set => requiredDragAmount = value;
         }
 
+        public float HoldDownTime
+        {
+            get => holdDownTime;
+            set => holdDownTime = value;
+        }
+
         private bool isDragging;
         private bool didInvoke;
         private Vector2 fingerPosOnDown;
+        private float currHoldDownTime = 0;
+
+        private void Awake()
+        {
+            procImg = GetComponent<ProceduralImage>();
+        }
         
         public override void OnPointerDown(PointerEventData eventData)
         {
             base.OnPointerDown(eventData);
 
             if (!Application.isPlaying) return;
-            isDragging = true;
+
             fingerPosOnDown = eventData.position;
-            
+            isDragging = true;
+            currHoldDownTime = 0;
         }
 
         public override void OnPointerUp(PointerEventData eventData)
-        {
+        { 
             base.OnPointerUp(eventData);
             
             if (!Application.isPlaying) return;
             
             isDragging = false;
             didInvoke = false;
-            
+            currHoldDownTime = 0;
+            Debug.Log("STOP");
             OnDragStop?.Invoke();
         }
+        
+        public void OnDrag(PointerEventData eventData) { }
 
         public void Update()
         {
             if (!isDragging) return;
-
             if (didInvoke) return;
+
+            currHoldDownTime += Time.deltaTime;
             
-            if (Vector2.Distance(fingerPosOnDown, new Vector2(Pointer.current.position.x.ReadValue(), Pointer.current.position.y.ReadValue())) < requiredDragAmount)
-            {
-                return;
-            }
-            
+            if (currHoldDownTime < holdDownTime) return;
+
             OnDragStart?.Invoke();
             didInvoke = true;
+            currHoldDownTime = 0;
         }
     }
 }
