@@ -18,16 +18,8 @@ namespace Gameplay
         
         public void PlaceVehicle(Vehicles.VehicleType type)
         {
-            if (isPlacing)
-            {
-                Debug.LogWarning("Already placing.");
-                return;
-            }
-
             isPlacing = true;
-            
             vehicleLoadingManager.Load(type);
-            
             PlaceVehicleEvent?.Invoke();
         }
 

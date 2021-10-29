@@ -59,7 +59,13 @@ namespace Gameplay
 
         private void HandleEnterPlayMode()
         {
-            vehiclePlacementManager.PlaceVehicle(Vehicles.VehicleType.MonsterTruck);
+            if (!PlayerPrefs.HasKey("LastVehicle"))
+            {
+                PlayerPrefs.SetInt("LastVehicle", 0);
+            }
+            
+            int lastVehicle = PlayerPrefs.GetInt("LastVehicle");
+            vehiclePlacementManager.PlaceVehicle((Vehicles.VehicleType) lastVehicle);
         }
 
         private void HandleExitPlayMode()

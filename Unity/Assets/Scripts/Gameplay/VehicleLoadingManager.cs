@@ -14,6 +14,10 @@ namespace Gameplay
 
         private bool isLoading = false;
 
+        /// <summary>
+        /// Loads vehicles. Not necessary to call this. Instead use placement manager
+        /// </summary>
+        /// <param name="vehicleType"></param>
         public void Load(Vehicles.VehicleType vehicleType)
         {
             if (currVehicle)

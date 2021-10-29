@@ -7,7 +7,7 @@ namespace Constants
     {
         public enum VehicleType
         {
-            MonsterTruck
+            MonsterTruck = 0
         }
 
         public static readonly Dictionary<VehicleType, string> VehicleDict = new Dictionary<VehicleType, string>

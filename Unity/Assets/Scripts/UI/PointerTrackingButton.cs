@@ -43,8 +43,10 @@ namespace UI
         private Vector2 fingerPosOnDown;
         private float currHoldDownTime = 0;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+            
             procImg = GetComponent<ProceduralImage>();
         }
         

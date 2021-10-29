@@ -11,18 +11,22 @@ namespace Gameplay
 {
     public class PropSpawnManager : MonoBehaviour
     {
+        [Header("References")]
+        [SerializeField] private Transform propSpawnParent;
         [SerializeField] private ScrollRect propSpawnScrollRect;
         [SerializeField] private GameObject propSpawnButtonsHolder;
         
         private PropSpawnButtonData[] propSpawnButtons;
-        private HashSet<GameObject> spawnedObjects;
+        private Dictionary<GameObject, int> spawnedObjects; //key: gameobject itself | value: proptype enum
+
+        public Dictionary<GameObject, int> SpawnedObjects => spawnedObjects;
 
         private GameObject currentlyPlacing = null;
         private bool isLoading = false;
-        
+
         private void Start()
         {
-            spawnedObjects = new HashSet<GameObject>();
+            spawnedObjects = new Dictionary<GameObject, int>();
 
             propSpawnButtons = propSpawnButtonsHolder.GetComponentsInChildren<PropSpawnButtonData>();
 
@@ -33,7 +37,7 @@ namespace Gameplay
                 {
                     propSpawnScrollRect.vertical = false;
                     SetButtonsInteractable(false);
-                    SpawnProp(button);
+                    SpawnProp(button.PropType, Vector3.zero, Quaternion.identity);
                 };
 
                 button.PointerTrackingButton.OnDragStop += () =>
@@ -60,19 +64,20 @@ namespace Gameplay
             HandlePlacing();
         }
 
-        private void SpawnProp(PropSpawnButtonData propSpawnButtonData)
+        public void SpawnProp(Props.Prop propType, Vector3 position, Quaternion rotation, bool shouldPlace = true)
         {
             if (isLoading) return;
             isLoading = true;
 
-            string address = Props.PropDict[propSpawnButtonData.PropType];
+            string address = Props.PropDict[propType];
             
-            Addressables.InstantiateAsync(address, Vector3.zero, Quaternion.identity).Completed += handle =>
+            Addressables.InstantiateAsync(address, position, rotation, propSpawnParent).Completed += handle =>
             {
-                spawnedObjects.Add(handle.Result);
+                spawnedObjects.Add(handle.Result, (int)propType);
                 isLoading = false;
-
-                currentlyPlacing = handle.Result;
+                
+                if(shouldPlace)
+                    currentlyPlacing = handle.Result;
             };
         }
 
@@ -81,19 +86,22 @@ namespace Gameplay
             if (!currentlyPlacing) return;
             
             Vector3 currPos = currentlyPlacing.transform.position;
-
             currPos.y -= 2;
-            
             currentlyPlacing.transform.position = currPos;
-            
-            
-            
             currentlyPlacing = null;
         }
         
         private void DestroyObj(GameObject obj)
         {
             Addressables.ReleaseInstance(obj);
+        }
+
+        public void ClearAllProps()
+        {
+            for (int i = 0; i < propSpawnParent.childCount; i++)
+            {
+                DestroyObj(propSpawnParent.GetChild(i).gameObject);
+            }
         }
         
         private void HandlePlacing()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -88}
+  m_AnchoredPosition: {x: 0, y: -289}
   m_SizeDelta: {x: 316.8, y: 86.72}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &62387510
@@ -533,7 +533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9c4b9f18b624a33b13dafc5cd28017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
 --- !u!114 &277232893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +733,7 @@ MonoBehaviour:
   origin: {fileID: 199115016}
   planeManager: {fileID: 199115015}
   raycastMask: 1
+  fontSize: 35
 --- !u!4 &584069402
 Transform:
   m_ObjectHideFlags: 0
@@ -784,7 +784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -201}
   m_SizeDelta: {x: 316.80005, y: 86.72}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &781829499
@@ -1267,7 +1267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -201}
   m_SizeDelta: {x: 316.8, y: 86.72}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1337723566
@@ -6396,7 +6396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -319}
+  m_AnchoredPosition: {x: 0, y: -520}
   m_SizeDelta: {x: 592.5, y: 50.91}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1883263241
@@ -6636,8 +6636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d180956a54db4646a1c6342921672ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackingStateVisibilityThreshold: 1
-  m_HideSubsumed: 1
 --- !u!114 &1935852495
 MonoBehaviour:
   m_ObjectHideFlags: 0
