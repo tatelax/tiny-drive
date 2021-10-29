@@ -8,14 +8,12 @@ namespace Constants
         {
             Cone,
             Barrier,
-            Ramp,
-            Coin
+            DirtRamp1,
         }
 
         public static readonly Dictionary<Prop, string> PropDict = new Dictionary<Prop, string>
         {
-            {Prop.Coin, "Assets/Prefabs/TrackObjs/Coin.prefab"},
-            {Prop.Ramp, "Assets/Prefabs/TrackObjs/Ramp.prefab"}
+            {Prop.DirtRamp1, "Assets/Art/Toon Racing/Prefabs/Track Kit/Dirt_Ramp_1A.prefab"}
         };
     }
 }

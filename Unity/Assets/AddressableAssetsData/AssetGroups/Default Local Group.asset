@@ -25,8 +25,8 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/TrackObjs/Coin.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: bff890dac0dce40d39c574d2c45a24fc
-    m_Address: Assets/Prefabs/TrackObjs/Ramp.prefab
+  - m_GUID: 25b426a566ca11a4eace06a5c1c07909
+    m_Address: Assets/Art/Toon Racing/Prefabs/Track Kit/Dirt_Ramp_1A.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
