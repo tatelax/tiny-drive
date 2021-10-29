@@ -340,6 +340,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13958743}
   m_CullTransparentMesh: 1
+--- !u!1 &19341930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1491249167914733889, guid: 128cb82c909744afc9a45b8732c4011d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1153050412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &22732919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,6 +2860,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1491249167914733889, guid: 128cb82c909744afc9a45b8732c4011d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1704738898189095469, guid: 128cb82c909744afc9a45b8732c4011d,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3162,6 +3173,7 @@ GameObject:
   - component: {fileID: 1261135522}
   - component: {fileID: 1261135527}
   - component: {fileID: 1261135528}
+  - component: {fileID: 1261135529}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3296,6 +3308,20 @@ MonoBehaviour:
   loadButton: {fileID: 1514774078}
   propSpawnManager: {fileID: 1261135522}
   arWorldMapController: {fileID: 6672308126474732644}
+--- !u!114 &1261135529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261135520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 206b24faffcd04a25937359ceba80156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehiclePlacementManager: {fileID: 1261135523}
+  vehicleControlsUI: {fileID: 19341930}
 --- !u!1 &1276178295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3314,7 +3340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1276178296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5412,5 +5438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93df56e477e83485aa1c8398f4cd00a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activateAtStart: 1
   m_Goal: 1
   m_ActivatesAutomatically: 1

@@ -127,7 +127,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 sessionSubsystem.sessionDelegate = new CustomSessionDelegate();
             }
             else
-    #endif
+    #endif 
             {
                 Debug.LogError("ARCoachingOverlayView is not supported by this device.");
             }

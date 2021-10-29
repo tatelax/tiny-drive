@@ -13,8 +13,11 @@ namespace Gameplay
         [SerializeField] private Camera arCamera;
 
         public event Action PlaceVehicleEvent;
+        public event Action StopPlaceVehicleEvent;
+        public event Action ReleaseVehicleEvent;
         
         private bool isPlacing = false;
+        public bool IsPlacing => isPlacing;
         
         public void PlaceVehicle(Vehicles.VehicleType type)
         {
@@ -32,6 +35,7 @@ namespace Gameplay
             }
             
             isPlacing = false;
+            StopPlaceVehicleEvent?.Invoke();
         }
 
         public void ReleaseVehicle()
@@ -44,6 +48,7 @@ namespace Gameplay
 
             isPlacing = false;
             vehicleLoadingManager.CurrVehicle.GetComponent<VehiclePlacementHandler>().Release();
+            ReleaseVehicleEvent?.Invoke();
         }
 
         private void Update()
