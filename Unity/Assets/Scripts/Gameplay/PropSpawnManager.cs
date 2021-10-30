@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Constants;
+using DG.Tweening;
 using UI;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -15,6 +16,8 @@ namespace Gameplay
         [SerializeField] private Transform propSpawnParent;
         [SerializeField] private ScrollRect propSpawnScrollRect;
         [SerializeField] private GameObject propSpawnButtonsHolder;
+        [SerializeField] private Ease easeType;
+        [SerializeField] private float animSpeed = 0.2f;
         
         private PropSpawnButtonData[] propSpawnButtons;
         private Dictionary<GameObject, int> spawnedObjects; //key: gameobject itself | value: proptype enum
@@ -85,9 +88,9 @@ namespace Gameplay
         {
             if (!currentlyPlacing) return;
             
-            Vector3 currPos = currentlyPlacing.transform.position;
-            currPos.y -= 2;
-            currentlyPlacing.transform.position = currPos;
+            float endYPos = currentlyPlacing.transform.position.y - 2;
+
+            currentlyPlacing.transform.DOMoveY(endYPos, animSpeed).SetEase(easeType);
             currentlyPlacing = null;
         }
         

@@ -529,7 +529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HumanSegmentationStencilMode: 0
   m_HumanSegmentationDepthMode: 0
-  m_EnvironmentDepthMode: 2
+  m_EnvironmentDepthMode: 3
   m_OcclusionPreferenceMode: 0
 --- !u!1 &26579970
 GameObject:
@@ -3307,6 +3307,8 @@ MonoBehaviour:
   propSpawnParent: {fileID: 1087304027}
   propSpawnScrollRect: {fileID: 1377771118}
   propSpawnButtonsHolder: {fileID: 790523560}
+  easeType: 25
+  animSpeed: 0.5
 --- !u!114 &1261135523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5581,6 +5583,7 @@ GameObject:
   - component: {fileID: 5434462552450501220}
   - component: {fileID: 6672308126474732644}
   - component: {fileID: 6672308126474732645}
+  - component: {fileID: 6672308126474732646}
   m_Layer: 0
   m_Name: AR Session
   m_TagString: Untagged
@@ -5621,3 +5624,18 @@ MonoBehaviour:
   activateAtStart: 1
   m_Goal: 1
   m_ActivatesAutomatically: 1
+--- !u!114 &6672308126474732646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6672308126474732643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af60cf2605c94ad397c42dd8927c008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objsToToggle:
+  - {fileID: 1095288015}
+  - {fileID: 1868768670}
