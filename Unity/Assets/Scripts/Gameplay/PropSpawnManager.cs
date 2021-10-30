@@ -79,6 +79,9 @@ namespace Gameplay
                 spawnedObjects.Add(handle.Result, (int)propType);
                 isLoading = false;
                 
+                if(handle.Result.GetComponent<PropTransformHandler>() == null)
+                    handle.Result.AddComponent<PropTransformHandler>(); // doing this because ill probably forget to add this to all the prefabs
+                
                 if(shouldPlace)
                     currentlyPlacing = handle.Result;
             };
