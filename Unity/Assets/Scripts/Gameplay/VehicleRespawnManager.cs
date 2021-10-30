@@ -42,6 +42,7 @@ namespace Gameplay
             if (currFallTime >= maxFreeFallTime)
             {
                 Respawn();
+                currFallTime = 0;
             }
         }
 
