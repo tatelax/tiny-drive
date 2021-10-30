@@ -21,12 +21,12 @@ namespace Gameplay
         
         private PropSpawnButtonData[] propSpawnButtons;
         private Dictionary<GameObject, int> spawnedObjects; //key: gameobject itself | value: proptype enum
-
-        public Dictionary<GameObject, int> SpawnedObjects => spawnedObjects;
-
         private GameObject currentlyPlacing = null;
         private bool isLoading = false;
-
+        
+        public Dictionary<GameObject, int> SpawnedObjects => spawnedObjects;
+        public GameObject CurrentlyPlacing => currentlyPlacing;
+        
         private void Start()
         {
             spawnedObjects = new Dictionary<GameObject, int>();
@@ -78,9 +78,9 @@ namespace Gameplay
             {
                 spawnedObjects.Add(handle.Result, (int)propType);
                 isLoading = false;
-                
-                if(handle.Result.GetComponent<PropTransformHandler>() == null)
-                    handle.Result.AddComponent<PropTransformHandler>(); // doing this because ill probably forget to add this to all the prefabs
+                //
+                // if(handle.Result.GetComponent<PropTransformHandler>() == null)
+                //     handle.Result.AddComponent<PropTransformHandler>(); // doing this because ill probably forget to add this to all the prefabs
                 
                 if(shouldPlace)
                     currentlyPlacing = handle.Result;
@@ -94,6 +94,7 @@ namespace Gameplay
             float endYPos = currentlyPlacing.transform.position.y - 2;
 
             currentlyPlacing.transform.DOMoveY(endYPos, animSpeed).SetEase(easeType);
+            //currentlyPlacing.GetComponent<PropTransformHandler>().enabled = false;
             currentlyPlacing = null;
         }
         

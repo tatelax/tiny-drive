@@ -4,8 +4,11 @@ using UnityEngine;
 
 namespace Gameplay
 {
-    public class PropTransformHandler : MonoBehaviour
+    public class PropTransformManager : MonoBehaviour
     {
+        [Header("References")]
+        [SerializeField] private PropSpawnManager propSpawnManager;
+        
         private float rotationDegressDelta;
 
         /// <summary>
@@ -17,7 +20,6 @@ namespace Gameplay
         {
             RotationGesture = new RotateGestureRecognizer();
             RotationGesture.StateUpdated += RotationGesture_Updated;
-
             FingersScript.Instance.AddGesture(RotationGesture);
         }
         
@@ -43,15 +45,11 @@ namespace Gameplay
 
         private void Update()
         {
-            Vector3 newRot = transform.rotation.eulerAngles;
+            if (!propSpawnManager.CurrentlyPlacing) return;
+            
+            Vector3 newRot = propSpawnManager.CurrentlyPlacing.transform.rotation.eulerAngles;
             newRot.y -= rotationDegressDelta;
-
-            Quaternion newQuat = new Quaternion
-            {
-                eulerAngles = newRot
-            };
-
-            transform.rotation = newQuat;
+            propSpawnManager.CurrentlyPlacing.transform.rotation = Quaternion.Euler(newRot);
         }
     }
 }
