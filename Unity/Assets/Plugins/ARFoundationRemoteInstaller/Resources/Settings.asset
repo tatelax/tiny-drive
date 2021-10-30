@@ -12,25 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd607c3f010ab45a29ecfcf8d5a898ef, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  ARCompanionAppIP: 169.254.137.179
+  ARCompanionAppIP: 192.168.1.65
   arCompanionSettings:
     cameraVideoSettings:
       enableVideo: 1
       syncCameraPoseWithVideo: 1
-      resolutionScale: 0.2068
-      quality: 45
-      maxVideoFps: 15
+      resolutionScale: 0.475
+      quality: 81
+      maxVideoFps: 30
       maxCpuImagesFps: 30
       maxCameraIntrinsicsFps: 1
     occlusionSettings:
-      maxFPS: 10
+      maxFPS: 20
       resolutionScale: 0.33
     faceTrackingSettings:
       maxFPS: 30
       sendVertices: 1
       sendNormals: 1
       sendARKitBlendshapes: 1
-    CPUImagePlaneMode: 2
+    CPUImagePlaneMode: 1
     maxLatency: 0.5
     latencyReduceSpeed: 0.5
     normalLatency: 0.2
@@ -86,13 +86,13 @@ MonoBehaviour:
       e33: 1
     overrideProjectionMatrix: 0
     projectionMatrix:
-      e00: 3.4870338
+      e00: 3.4427874
       e01: 0
-      e02: -0.002043724
+      e02: 0.000052332878
       e03: 0
       e10: 0
-      e11: 1.6103913
-      e12: 0.02260685
+      e11: 1.5899572
+      e12: 0.01865983
       e13: 0
       e20: 0
       e21: 0

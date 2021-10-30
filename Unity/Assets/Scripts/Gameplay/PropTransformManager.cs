@@ -21,6 +21,9 @@ namespace Gameplay
             rotationGesture.StateUpdated += RotationGesture_Updated;
             scaleGesture.StateUpdated += ScaleGesture_Updated;
 
+            rotationGesture.AllowSimultaneousExecutionWithAllGestures();
+            scaleGesture.AllowSimultaneousExecutionWithAllGestures();
+
             FingersScript.Instance.AddGesture(rotationGesture);
             FingersScript.Instance.AddGesture(scaleGesture);
         }

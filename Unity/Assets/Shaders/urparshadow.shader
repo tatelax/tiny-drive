@@ -14,6 +14,8 @@ Shader "URP AR Shadow Receiver"
             "Queue"="Transparent-1"
         }
  
+        Offset -50, -50
+        
         Pass
         {
             Name "ForwardLit"

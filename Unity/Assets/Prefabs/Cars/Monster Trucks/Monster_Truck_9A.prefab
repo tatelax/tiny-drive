@@ -2137,7 +2137,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7094475012377850476}
   serializedVersion: 2
-  m_Mass: 1400
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -3045,13 +3045,13 @@ MonoBehaviour:
   lowSpeedSubsteps: 25
   highSpeedSubsteps: 20
   asleepSubsteps: 2
-  mass: 3000
+  mass: 500
   maxAngularVelocity: 8
   drag: 0
   angularDrag: 0
   physicsMaterial: {fileID: 13400000, guid: 22fc4cb3a07b34e4cbc20c64ac7bd3be, type: 2}
   centerOfMass: {x: 0.000000029802322, y: 1.3952075, z: 0.00017130375}
-  inertiaTensor: {x: 2804.1782, y: 3805.2258, z: 1186.8191}
+  inertiaTensor: {x: 596.9881, y: 746.666, z: 505.36908}
   vehicleDimensions: {x: 2, y: 3.5, z: 5.2}
   interpolation: 1
   updateLODs: 1
