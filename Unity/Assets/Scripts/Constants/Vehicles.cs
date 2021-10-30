@@ -7,12 +7,12 @@ namespace Constants
     {
         public enum VehicleType
         {
-            MonsterTruck = 0
+            MonsterTruck9A = 0
         }
 
         public static readonly Dictionary<VehicleType, string> VehicleDict = new Dictionary<VehicleType, string>
         {
-            { VehicleType.MonsterTruck, "Assets/Prefabs/Vehicles/MonsterTruck.prefab" }
+            { VehicleType.MonsterTruck9A, "Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_9A.prefab" }
         };
     }
 }

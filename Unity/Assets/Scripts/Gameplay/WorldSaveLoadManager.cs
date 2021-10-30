@@ -46,6 +46,7 @@ namespace Gameplay
                     position.y,
                     position.z,
                     rotation.x,
+                    
                     rotation.y,
                     rotation.z);
                 

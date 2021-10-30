@@ -10,9 +10,10 @@ namespace Gameplay
     {
         private GameObject currVehicle = null;
 
-        public GameObject CurrVehicle => currVehicle;
-
         private bool isLoading = false;
+        private Vehicles.VehicleType lastVehicleType = 0;
+        
+        public GameObject CurrVehicle => currVehicle;
 
         /// <summary>
         /// Loads vehicles. Not necessary to call this. Instead use placement manager

@@ -21,12 +21,12 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Vehicles/MonsterTruck.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: a9386c8dd5bb248d7ac68bb92f20ad8d
-    m_Address: Assets/Prefabs/TrackObjs/Coin.prefab
+  - m_GUID: 2e333eb447a444f389483cb63f2f4356
+    m_Address: Assets/Prefabs/Track Kit/Dirt_Ramp_1A.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 25b426a566ca11a4eace06a5c1c07909
-    m_Address: Assets/Art/Toon Racing/Prefabs/Track Kit/Dirt_Ramp_1A.prefab
+  - m_GUID: f28761d0ad465451c8a37a60861d28b1
+    m_Address: Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_9A.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

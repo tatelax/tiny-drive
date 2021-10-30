@@ -12,18 +12,22 @@ namespace Gameplay
         [SerializeField] private VehicleLoadingManager vehicleLoadingManager;
         [SerializeField] private Camera arCamera;
 
+        private Vehicles.VehicleType lastVehicleType;
+        
         public event Action PlaceVehicleEvent;
         public event Action StopPlaceVehicleEvent;
         public event Action ReleaseVehicleEvent;
         
         private bool isPlacing = false;
         public bool IsPlacing => isPlacing;
+        public Vehicles.VehicleType LastVehicleType => lastVehicleType;
         
         public void PlaceVehicle(Vehicles.VehicleType type)
         {
             isPlacing = true;
             vehicleLoadingManager.Load(type);
             PlaceVehicleEvent?.Invoke();
+            lastVehicleType = type;
         }
 
         public void StopPlacing()
