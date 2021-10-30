@@ -25,12 +25,17 @@ namespace Vehicle
             }
 
             coll.isTrigger = true;
+            vehicleController.enabled = false;
+            rb.isKinematic = true;
         }
 
         public void Release()
         {
             rb.constraints = RigidbodyConstraints.None;
             rb.useGravity = true;
+            rb.isKinematic = false;
+
+            vehicleController.enabled = true;
             vehicleController.Wake();
             coll.isTrigger = false;
             

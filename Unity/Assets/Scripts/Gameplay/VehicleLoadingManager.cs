@@ -11,7 +11,6 @@ namespace Gameplay
         private GameObject currVehicle = null;
 
         private bool isLoading = false;
-        private Vehicles.VehicleType lastVehicleType = 0;
         
         public GameObject CurrVehicle => currVehicle;
 
