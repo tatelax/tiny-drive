@@ -79,6 +79,21 @@ namespace Gameplay
                 spawnedObjects.Add(handle.Result, (int)propType);
                 isLoading = false;
 
+                if (handle.Result.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))
+                {
+                    rbParent.isKinematic = true;
+                    rbParent.constraints = RigidbodyConstraints.FreezeRotation;
+                }
+                
+                for (int i = 0; i < handle.Result.transform.childCount; i++)
+                {
+                    if (handle.Result.transform.GetChild(i).TryGetComponent<Rigidbody>(out Rigidbody rbChild))
+                    {
+                        rbChild.isKinematic = true;
+                        rbChild.constraints = RigidbodyConstraints.FreezeRotation;
+                    }
+                }
+
                 if(shouldPlace)
                     currentlyPlacing = handle.Result;
             };
@@ -90,9 +105,25 @@ namespace Gameplay
             
             float endYPos = currentlyPlacing.transform.position.y - 2;
 
-            currentlyPlacing.transform.DOMoveY(endYPos, animSpeed).SetEase(easeType);
-            //currentlyPlacing.GetComponent<PropTransformHandler>().enabled = false;
-            currentlyPlacing = null;
+            currentlyPlacing.transform.DOMoveY(endYPos, animSpeed).SetEase(easeType).onComplete += () =>
+            {
+                if (currentlyPlacing.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))
+                {
+                    rbParent.isKinematic = false;
+                    rbParent.constraints = RigidbodyConstraints.None;
+                }
+                
+                for (int i = 0; i < currentlyPlacing.transform.childCount; i++)
+                {
+                    if (currentlyPlacing.transform.GetChild(i).TryGetComponent<Rigidbody>(out Rigidbody rbChild))
+                    {
+                        rbChild.isKinematic = false;
+                        rbChild.constraints = RigidbodyConstraints.None;
+                    }
+                }
+                
+                currentlyPlacing = null;
+            };
         }
         
         private void DestroyObj(GameObject obj)
