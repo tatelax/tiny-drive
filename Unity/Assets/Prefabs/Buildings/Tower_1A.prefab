@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000010797323400}
   - component: {fileID: 23000012923769216}
   - component: {fileID: 95000012958965566}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rotating_Platform_1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,6 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,6 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &95000012958965566
 Animator:
   serializedVersion: 3
@@ -110,8 +112,8 @@ GameObject:
   - component: {fileID: 4000010164972376}
   - component: {fileID: 33000011019111710}
   - component: {fileID: 23000010131453408}
-  - component: {fileID: 64000014016730922}
-  m_Layer: 0
+  - component: {fileID: 3348004322972533408}
+  m_Layer: 2
   m_Name: Tower_1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,6 +158,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -180,8 +183,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64000014016730922
-MeshCollider:
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3348004322972533408
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -190,7 +194,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: e6f25346da89d44fea1c445b2166fbe1, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 16.04, y: 26.3, z: 16.4}
+  m_Center: {x: 0.00000047683716, y: 13, z: 0.0000014305115}

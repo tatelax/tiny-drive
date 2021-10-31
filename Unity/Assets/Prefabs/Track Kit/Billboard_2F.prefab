@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 95000013972655260}
   - component: {fileID: 65000013779251766}
   - component: {fileID: 65000010799146784}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Billboard_2F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,6 +60,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -84,6 +85,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &95000013972655260
 Animator:
   serializedVersion: 3
@@ -140,7 +142,7 @@ GameObject:
   - component: {fileID: 4000011605700614}
   - component: {fileID: 33000010138208122}
   - component: {fileID: 23000012080247106}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Billboard_2F_Image.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,6 +186,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -208,6 +211,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1000014103041484
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +223,7 @@ GameObject:
   - component: {fileID: 4000011503762522}
   - component: {fileID: 33000012556544602}
   - component: {fileID: 23000013540018332}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Billboard_2F_Image.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,6 +267,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -287,3 +292,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

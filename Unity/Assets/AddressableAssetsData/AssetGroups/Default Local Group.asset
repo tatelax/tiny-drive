@@ -29,6 +29,98 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_9A.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a3615df6b173d4d3384a8c9d04d9a39a
+    m_Address: Assets/Prefabs/Buildings/Tower_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a624cf682c5224163a54abf83049e256
+    m_Address: Assets/Prefabs/Buildings/Press_Tower_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d1bc56e4ce0c94f858b7565bc5b1e4d7
+    m_Address: Assets/Prefabs/Buildings/Garage_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7e8d7c3def9644e97b2ec0bc8beb8e27
+    m_Address: Assets/Prefabs/Props/Barrel_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5c6e1982b0d1241c6acd7f58b022c429
+    m_Address: Assets/Prefabs/Props/Barrel_1B.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eaf7955aae0504da6b6584d93fc50660
+    m_Address: Assets/Prefabs/Props/Cone_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 241aba3e3390a4e60b8707dc20839188
+    m_Address: Assets/Prefabs/Props/Cone_1B.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fa45040d9f1024a37bdea65010c3a823
+    m_Address: Assets/Prefabs/Props/Extinguisher_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7897ecf60910e4bf48c27845d9d4d4a8
+    m_Address: Assets/Prefabs/Props/Impact_Tires_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4e6870dd6186447efbb3eafc9657bd7d
+    m_Address: Assets/Prefabs/Props/Impact_Tires_2A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9c67002cfe5a44a71bc744848b310bb5
+    m_Address: Assets/Prefabs/Props/Pine_Tree_2A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 43611a7f980434be3bb104cbc3084d45
+    m_Address: Assets/Prefabs/Props/Pine_Tree_2B.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a31887459152e4674a1d2e2b4e837157
+    m_Address: Assets/Prefabs/Props/Rocks_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9ff8fe4be353943ddab59b944204e2c4
+    m_Address: Assets/Prefabs/Props/Rocks_1B.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d559c4ec8fcd240bda2ad6e71c8effad
+    m_Address: Assets/Prefabs/Track Kit/Billboard_2F.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6338719a344f64d3eb17d607023aaeba
+    m_Address: Assets/Prefabs/Track Kit/Canopy_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1063f3cc4f3c943f6a130ce76d115b78
+    m_Address: Assets/Prefabs/Track Kit/Dirt_Ramp_1B.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f13c6c1c213a44718b168b376dc8b35f
+    m_Address: Assets/Prefabs/Track Kit/Dirt_Ramp_1C.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 814257bd1037146caa015b3eae3f539c
+    m_Address: Assets/Prefabs/Track Kit/Fence_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: be5a76f58bc7540c88323dc1e70dfcfd
+    m_Address: Assets/Prefabs/Track Kit/Fence_2A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: db4047217fe4e4a1f8a2f58fb8036f65
+    m_Address: Assets/Prefabs/Track Kit/Fence_3A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7aca418f7701947ff923df7050d8cc5e
+    m_Address: Assets/Prefabs/Track Kit/Sign_Support_1A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 225f9b6881a2c4c71a38c8e9d34dd2ab
+    m_Address: Assets/Prefabs/Track Kit/Stand_1E.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2cbf2544582774f3da22469a0dc39b90, type: 2}
   m_SchemaSet:

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4000011506416340}
   - component: {fileID: 33000010892635438}
   - component: {fileID: 23000012617520136}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lights_Red_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,6 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1000011761852470
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +95,7 @@ GameObject:
   - component: {fileID: 65000012632042698}
   - component: {fileID: 65000013062816128}
   - component: {fileID: 65000011832675662}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sign_Support_1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +142,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -164,6 +167,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &65000012632042698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -214,7 +218,7 @@ GameObject:
   - component: {fileID: 4000011447513862}
   - component: {fileID: 33000014202137350}
   - component: {fileID: 23000011540091208}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lights_Red_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,6 +262,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -282,6 +287,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1000013186393348
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +299,7 @@ GameObject:
   - component: {fileID: 4000011555229096}
   - component: {fileID: 33000014049205832}
   - component: {fileID: 23000011690608640}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lights_Green_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,6 +343,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -361,3 +368,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
