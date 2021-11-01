@@ -16,7 +16,7 @@ namespace UI
     /// </summary>
     [AddComponentMenu("Custom/Pointer Tracking Button")]
     [RequireComponent(typeof(ProceduralImage))]
-    public class PointerTrackingButton : Button, IDragHandler
+    public class PointerTrackingButton : Button
     {
         [SerializeField] private float requiredDragAmount = 2.0f;
         [SerializeField] private float holdDownTime = 1f;
@@ -74,8 +74,6 @@ namespace UI
             OnDragStop?.Invoke();
         }
         
-        public void OnDrag(PointerEventData eventData) { }
-
         public void Update()
         {
             if (!isDragging) return;
