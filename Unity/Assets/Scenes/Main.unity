@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 9
+  propAddress: Assets/Prefabs/Props/Impact_Tires_2A.prefab
 --- !u!114 &57253661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 16
+  propAddress: Assets/Prefabs/Track Kit/Dirt_Ramp_1A.prefab
 --- !u!114 &309572688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 5
+  propAddress: Assets/Prefabs/Props/Cone_1A.prefab
 --- !u!114 &321289797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,7 +2421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 21
+  propAddress: Assets/Prefabs/Track Kit/Fence_3A.prefab
 --- !u!114 &408608843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 11
+  propAddress: Assets/Prefabs/Props/Pine_Tree_2B.prefab
 --- !u!114 &419966755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3072,7 +3072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 0
+  propAddress: Assets/Prefabs/Buildings/Tower_1A.prefab
 --- !u!114 &668037363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3225,7 +3225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 2
+  propAddress: Assets/Prefabs/Buildings/Garage_1A.prefab
 --- !u!114 &673823569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3687,7 +3687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 20
+  propAddress: Assets/Prefabs/Track Kit/Fence_2A.prefab
 --- !u!114 &749510316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4394,7 +4394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 8
+  propAddress: Assets/Prefabs/Props/Impact_Tires_1A.prefab
 --- !u!114 &871805215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4547,7 +4547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 19
+  propAddress: Assets/Prefabs/Track Kit/Fence_1A.prefab
 --- !u!114 &890264226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4881,7 +4881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 1
+  propAddress: Assets/Prefabs/Buildings/Press_Tower_1A.prefab
 --- !u!114 &978311579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5274,7 +5274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 6
+  propAddress: Assets/Prefabs/Props/Cone_1B.prefab
 --- !u!114 &1035496645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5502,7 +5502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 14
+  propAddress: Assets/Prefabs/Track Kit/Billboard_2F.prefab
 --- !u!114 &1055402457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5655,7 +5655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 10
+  propAddress: Assets/Prefabs/Props/Pine_Tree_2A.prefab
 --- !u!114 &1055430225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5919,7 +5919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 22
+  propAddress: Assets/Prefabs/Track Kit/Sign_Support_1A.prefab
 --- !u!114 &1079439179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6203,7 +6203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 23
+  propAddress: Assets/Prefabs/Track Kit/Stand_1E.prefab
 --- !u!114 &1102647268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7667,7 +7667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 4
+  propAddress: Assets/Prefabs/Props/Barrel_1B.prefab
 --- !u!114 &1475786629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7941,7 +7941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 15
+  propAddress: Assets/Prefabs/Track Kit/Canopy_1A.prefab
 --- !u!114 &1515315468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8824,7 +8824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 13
+  propAddress: Assets/Prefabs/Props/Rocks_1B.prefab
 --- !u!114 &1640440983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9112,7 +9112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 12
+  propAddress: Assets/Prefabs/Props/Rocks_1A.prefab
 --- !u!114 &1701858255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9265,7 +9265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 3
+  propAddress: Assets/Prefabs/Props/Barrel_1A.prefab
 --- !u!114 &1757287567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9552,7 +9552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 7
+  propAddress: Assets/Prefabs/Props/Extinguisher_1A.prefab
 --- !u!114 &1819912480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9705,7 +9705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 18
+  propAddress: Assets/Prefabs/Track Kit/Dirt_Ramp_1C.prefab
 --- !u!114 &1849257275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10496,7 +10496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41e3724186433497d9d361aa23923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 17
+  propAddress: Assets/Prefabs/Track Kit/Dirt_Ramp_1B.prefab
 --- !u!114 &2105780475
 MonoBehaviour:
   m_ObjectHideFlags: 0

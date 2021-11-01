@@ -75,7 +75,7 @@ namespace Gameplay
                 Vector3 position = new Vector3(prop.posX, prop.posY, prop.posZ);
                 Quaternion rotation = Quaternion.identity;
 
-                propSpawnManager.SpawnProp((Props.Prop)prop.propType, position, rotation, false);
+                propSpawnManager.SpawnProp(prop.propAddress, position, rotation, false);
             }
         }
 

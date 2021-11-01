@@ -20,16 +20,16 @@ namespace Gameplay
         [SerializeField] private float animSpeed = 0.2f;
         
         private PropSpawnButtonData[] propSpawnButtons;
-        private Dictionary<GameObject, int> spawnedObjects; //key: gameobject itself | value: proptype enum
+        private Dictionary<GameObject, string> spawnedObjects; //key: gameobject itself | value: proptype enum
         private GameObject currentlyPlacing = null;
         private bool isLoading = false;
         
-        public Dictionary<GameObject, int> SpawnedObjects => spawnedObjects;
+        public Dictionary<GameObject, string> SpawnedObjects => spawnedObjects;
         public GameObject CurrentlyPlacing => currentlyPlacing;
         
         private void Start()
         {
-            spawnedObjects = new Dictionary<GameObject, int>();
+            spawnedObjects = new Dictionary<GameObject, string>();
 
             propSpawnButtons = propSpawnButtonsHolder.GetComponentsInChildren<PropSpawnButtonData>();
 
@@ -40,7 +40,7 @@ namespace Gameplay
                 {
                     propSpawnScrollRect.vertical = false;
                     SetButtonsInteractable(false);
-                    SpawnProp(button.PropType, Vector3.zero, Quaternion.identity);
+                    SpawnProp(button.PropAddress, Vector3.zero, Quaternion.identity);
                 };
 
                 button.PointerTrackingButton.OnDragStop += () =>
@@ -67,16 +67,14 @@ namespace Gameplay
             HandlePlacing();
         }
 
-        public void SpawnProp(Props.Prop propType, Vector3 position, Quaternion rotation, bool shouldPlace = true)
+        public void SpawnProp(string propAddress, Vector3 position, Quaternion rotation, bool shouldPlace = true)
         {
             if (isLoading) return;
             isLoading = true;
 
-            string address = Props.PropDict[propType];
-            
-            Addressables.InstantiateAsync(address, position, rotation, propSpawnParent).Completed += handle =>
+            Addressables.InstantiateAsync(propAddress, position, rotation, propSpawnParent).Completed += handle =>
             {
-                spawnedObjects.Add(handle.Result, (int)propType);
+                spawnedObjects.Add(handle.Result, propAddress);
                 isLoading = false;
 
                 if (handle.Result.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))

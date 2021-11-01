@@ -8,9 +8,9 @@ namespace UI
     [RequireComponent(typeof(PointerTrackingButton))]
     public class PropSpawnButtonData : MonoBehaviour
     {
-        [SerializeField] private Props.Prop propType;
+        [SerializeField] string propAddress;
 
-        public Props.Prop PropType => propType;
+        public string PropAddress => propAddress;
         public PointerTrackingButton PointerTrackingButton { get; private set; }
 
         private void Awake()
