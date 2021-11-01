@@ -18,6 +18,7 @@ namespace Gameplay
         [SerializeField] private GameObject propSpawnButtonsHolder;
         [SerializeField] private Ease easeType;
         [SerializeField] private float animSpeed = 0.2f;
+        [SerializeField] private Button toggleEditModeButton;
         
         private PropSpawnButtonData[] propSpawnButtons;
         private Dictionary<GameObject, string> spawnedObjects; //key: gameobject itself | value: proptype enum
@@ -39,6 +40,8 @@ namespace Gameplay
                 button.PointerTrackingButton.OnDragStart += () =>
                 {
                     propSpawnScrollRect.vertical = false;
+                    DOTween.To(()=> propSpawnScrollRect.verticalNormalizedPosition, x=> propSpawnScrollRect.verticalNormalizedPosition = x, 1, animSpeed);
+                    
                     SetButtonsInteractable(false);
                     SpawnProp(button.PropAddress, Vector3.zero, Quaternion.identity);
                 };
@@ -58,6 +61,8 @@ namespace Gameplay
             {
                 propSpawnButtons[i].PointerTrackingButton.interactable = state;
             }
+
+            toggleEditModeButton.interactable = state;
         }
 
         private void Update()
