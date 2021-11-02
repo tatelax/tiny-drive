@@ -106,7 +106,7 @@ namespace Gameplay
         {
             if (!currentlyPlacing) return;
             
-            float endYPos = currentlyPlacing.transform.position.y - 2;
+            float endYPos = currentlyPlacing.transform.position.y - 1.99f; // 0.01f offset to fix z fighting
 
             currentlyPlacing.transform.DOMoveY(endYPos, animSpeed).SetEase(easeType).onComplete += () =>
             {

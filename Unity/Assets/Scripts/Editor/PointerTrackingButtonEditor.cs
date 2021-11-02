@@ -1,6 +1,7 @@
 using Gameplay;
 using UI;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,5 +25,11 @@ public class PointerTrackingButtonEditor : ButtonEditor
         serializedObject.ApplyModifiedProperties();
         
         base.OnInspectorGUI();
+        
+        if (GUI.changed)
+        {
+            EditorUtility.SetDirty(targetMyButton);
+            EditorSceneManager.MarkSceneDirty(targetMyButton.gameObject.scene);
+        }
     }
 }

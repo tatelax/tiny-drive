@@ -860,8 +860,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &57253662
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1757,8 +1758,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &309572689
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1910,8 +1912,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &321289798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2577,8 +2580,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &408608844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2730,8 +2734,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &419966756
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3228,8 +3233,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &668037364
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3381,8 +3387,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &673823570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3843,8 +3850,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &749510317
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4551,8 +4559,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &871805216
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4704,8 +4713,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &890264227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5038,8 +5048,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &978311580
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5084,7 +5095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00010681}
+  m_AnchoredPosition: {x: 0, y: -0.000091552734}
   m_SizeDelta: {x: 0, y: -0.00012207}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &987305098
@@ -5431,8 +5442,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1035496646
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5659,8 +5671,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1055402458
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5812,8 +5825,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1055430226
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6076,8 +6090,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1079439180
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6360,8 +6375,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1102647269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7302,7 +7318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.00018310547, y: 371.87915}
+  m_AnchoredPosition: {x: -0.00024414062, y: 371.87915}
   m_SizeDelta: {x: 0.0004, y: 743.7586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377771118
@@ -7825,8 +7841,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1475786630
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8099,8 +8116,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1515315469
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8982,8 +9000,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1640440984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9270,8 +9289,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1701858256
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9423,8 +9443,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1757287568
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9710,8 +9731,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1819912481
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9863,8 +9885,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &1849257276
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10654,8 +10677,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  scrollRect: {fileID: 1377771118}
   requiredDragAmount: 2
-  holdDownTime: 1
+  holdDownTime: 0.6
 --- !u!222 &2105780476
 CanvasRenderer:
   m_ObjectHideFlags: 0

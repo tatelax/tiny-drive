@@ -16,7 +16,8 @@ namespace UI
     /// </summary>
     [AddComponentMenu("Custom/Pointer Tracking Button")]
     [RequireComponent(typeof(ProceduralImage))]
-    public class PointerTrackingButton : Button, IDragHandler
+    [System.Serializable]
+    public class PointerTrackingButton : Button, IDragHandler, IBeginDragHandler, IEndDragHandler
     {
         [SerializeField] private ScrollRect scrollRect;
         [SerializeField] private float requiredDragAmount = 2.0f;
@@ -45,7 +46,7 @@ namespace UI
             set => holdDownTime = value;
         }
 
-        private bool isDragging;
+        private bool isHoldingDownButton;
         private bool didInvoke;
         private Vector2 fingerPosOnDown;
         private float currHoldDownTime = 0;
@@ -64,7 +65,7 @@ namespace UI
             if (!Application.isPlaying) return;
 
             fingerPosOnDown = eventData.position;
-            isDragging = true;
+            isHoldingDownButton = true;
             currHoldDownTime = 0;
         }
 
@@ -74,7 +75,7 @@ namespace UI
             
             if (!Application.isPlaying) return;
             
-            isDragging = false;
+            isHoldingDownButton = false;
             didInvoke = false;
             currHoldDownTime = 0;
             Debug.Log("STOP");
@@ -83,14 +84,29 @@ namespace UI
         
         public void OnDrag(PointerEventData eventData)
         {
-            if (!scrollRect) return;
+            if(!scrollRect) return;
             
             scrollRect.OnDrag(eventData);
+        }
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            if(!scrollRect) return;
+            
+            scrollRect.OnEndDrag(eventData);
+        }
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            if(!scrollRect) return;
+            
+            scrollRect.OnBeginDrag(eventData);
+
+            isHoldingDownButton = false;
+            currHoldDownTime = 0;
         }
         
         public void Update()
         {
-            if (!isDragging) return;
+            if (!isHoldingDownButton) return;
             if (didInvoke) return;
 
             currHoldDownTime += Time.deltaTime;
