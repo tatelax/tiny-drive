@@ -1,4 +1,3 @@
-using System;
 using Constants;
 using UI;
 using UnityEngine;
@@ -13,15 +12,20 @@ namespace Gameplay
         [SerializeField] private VehicleLoadingManager vehicleLoadingManager;
         [SerializeField] private VehiclePlacementManager vehiclePlacementManager;
         [SerializeField] private GameObject changeVehiclePanel;
+        [SerializeField] private GameObject toggleEditModeButton;
         [SerializeField] private Button changeVehicleButton;
+        [SerializeField] private Button cancelChangeVehicleButton;
+        [SerializeField] private GameObject placeVehicleButton;
         
         private VehicleChangeButtonData[] vehicleOptions;
         
         private void Start()
         {
             changeVehiclePanel.SetActive(false);
+            cancelChangeVehicleButton.gameObject.SetActive(false);
             
-            changeVehicleButton.onClick.AddListener(OpenPanel);
+            changeVehicleButton.onClick.AddListener((() => { TogglePanel(true);}));
+            cancelChangeVehicleButton.onClick.AddListener(() => { TogglePanel(false);});
             
             vehicleOptions = vehicleOptionsHolder.GetComponentsInChildren<VehicleChangeButtonData>();
             
@@ -35,12 +39,16 @@ namespace Gameplay
         private void ChangeVehicle(Vehicles.VehicleType vehicleType)
         {
             vehiclePlacementManager.PlaceVehicle(vehicleType);
-            changeVehiclePanel.SetActive(false);
+            TogglePanel(false);
         }
 
-        private void OpenPanel()
+        private void TogglePanel(bool setting)
         {
-            changeVehiclePanel.SetActive(true);
+            toggleEditModeButton.SetActive(!setting);
+            placeVehicleButton.SetActive(!setting);
+            changeVehicleButton.gameObject.SetActive(!setting);
+            cancelChangeVehicleButton.gameObject.SetActive(setting);
+            changeVehiclePanel.SetActive(setting);
         }
     }
 }
