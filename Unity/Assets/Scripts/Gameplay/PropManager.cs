@@ -30,8 +30,6 @@ namespace Gameplay
         private Dictionary<GameObject, string> spawnedProps; //key: gameobject itself | value: proptype enum
         private GameObject currentlyPlacing = null;
         private bool isLoading = false;
-        private bool isEditing;
-        private bool isAnimating;
         
         public Dictionary<GameObject, string> SpawnedProps => spawnedProps;
         public GameObject CurrentlyPlacing => currentlyPlacing;
@@ -120,64 +118,28 @@ namespace Gameplay
             
             float endYPos = currentlyPlacing.transform.position.y - 1.99f; // 0.01f offset to fix z fighting
 
-            isAnimating = true;
+            GameObject objToPlace = currentlyPlacing;
+            currentlyPlacing = null;
             
-            currentlyPlacing.transform.DOMoveY(endYPos, animSpeed).SetEase(easeType).onComplete += () =>
+            objToPlace.transform.DOMoveY(endYPos, animSpeed).SetEase(easeType).onComplete += () =>
             {
-                if (currentlyPlacing.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))
+                if (objToPlace.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))
                 {
                     rbParent.isKinematic = false;
                     rbParent.constraints = RigidbodyConstraints.None;
                 }
                 
-                for (int i = 0; i < currentlyPlacing.transform.childCount; i++)
+                for (int i = 0; i < objToPlace.transform.childCount; i++)
                 {
-                    if (currentlyPlacing.transform.GetChild(i).TryGetComponent<Rigidbody>(out Rigidbody rbChild))
+                    if (objToPlace.transform.GetChild(i).TryGetComponent<Rigidbody>(out Rigidbody rbChild))
                     {
                         rbChild.isKinematic = false;
                         rbChild.constraints = RigidbodyConstraints.None;
                     }
                 }
                 
-                currentlyPlacing = null;
-                isEditing = false;
-                isAnimating = false;
+                objToPlace = null;
             };
-        }
-        
-        private void DestroyProp(GameObject obj)
-        {
-            Addressables.ReleaseInstance(obj);
-            spawnedProps.Remove(obj);
-        }
-
-        public void ClearAllProps()
-        {
-            for (int i = 0; i < propSpawnParent.childCount; i++)
-            {
-                DestroyProp(propSpawnParent.GetChild(i).gameObject);
-            }
-            
-            spawnedProps.Clear();
-        }
-        
-        private void DeletePropButton()
-        {
-            DestroyProp(currentlyPlacing);
-            ToggleEditUI(false);
-            currentlyPlacing = null;
-            isEditing = false;
-        }
-
-        private void ConfirmPlacePropButton()
-        {
-            PlaceObject();
-            ToggleEditUI(false);
-        }
-
-        private void ToggleEditUI(bool setting)
-        {
-            editUIParent.SetActive(setting);
         }
         
         private void HandlePlacing()
@@ -191,7 +153,7 @@ namespace Gameplay
                 if (spawnedProps.ContainsKey(hit.transform.gameObject))
                     return;
 
-                if (IsPointerOverUIObject() || isAnimating) return;
+                if (IsPointerOverUIObject()) return;
                 
                 Vector3 objPos = hit.point;
                 objPos.y += 2f;
@@ -217,8 +179,6 @@ namespace Gameplay
                 rb.isKinematic = true;
                 rb.constraints = RigidbodyConstraints.FreezeRotation;
 
-                isEditing = true;
-
                 selectedObj.transform.DOMoveY(selectedObj.transform.position.y + 2, animSpeed).SetEase(easeType).onComplete +=
                     () =>
                     {
@@ -239,11 +199,12 @@ namespace Gameplay
             {
                 for (var i1 = 0; i1 < uiToIgnoreWhenRaycasting.Length; i1++)
                 {
-                    Debug.Log(results[i].gameObject.name + " | " + uiToIgnoreWhenRaycasting[i1].name);
-                    
-                    if (results[i].gameObject.name == uiToIgnoreWhenRaycasting[i1].name)
+                    for (var i2 = 0; i2 < uiToIgnoreWhenRaycasting[i1].transform.childCount; i2++)
                     {
-                        return true;
+                        if (results[i].gameObject == uiToIgnoreWhenRaycasting[i1].transform.GetChild(i2).gameObject)
+                        {
+                            return true;
+                        }
                     }
                 }
             }
@@ -251,5 +212,38 @@ namespace Gameplay
             return false;
         }
 
+        private void DestroyProp(GameObject obj)
+        {
+            Addressables.ReleaseInstance(obj);
+            spawnedProps.Remove(obj);
+        }
+
+        public void ClearAllProps()
+        {
+            for (int i = 0; i < propSpawnParent.childCount; i++)
+            {
+                DestroyProp(propSpawnParent.GetChild(i).gameObject);
+            }
+            
+            spawnedProps.Clear();
+        }
+        
+        private void DeletePropButton()
+        {
+            DestroyProp(currentlyPlacing);
+            ToggleEditUI(false);
+            currentlyPlacing = null;
+        }
+
+        private void ConfirmPlacePropButton()
+        {
+            PlaceObject();
+            ToggleEditUI(false);
+        }
+
+        private void ToggleEditUI(bool setting)
+        {
+            editUIParent.SetActive(setting);
+        }
     }
 }
