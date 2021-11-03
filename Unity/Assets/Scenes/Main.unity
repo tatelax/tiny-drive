@@ -6954,6 +6954,9 @@ MonoBehaviour:
   editUIParent: {fileID: 721386648}
   confirmButton: {fileID: 1642427933}
   deleteButton: {fileID: 1410486155}
+  uiLayer:
+    serializedVersion: 2
+    m_Bits: 32
 --- !u!114 &1261135523
 MonoBehaviour:
   m_ObjectHideFlags: 0

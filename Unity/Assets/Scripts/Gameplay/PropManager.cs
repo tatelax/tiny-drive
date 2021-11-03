@@ -5,6 +5,7 @@ using DG.Tweening;
 using UI;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -28,6 +29,7 @@ namespace Gameplay
         private Dictionary<GameObject, string> spawnedProps; //key: gameobject itself | value: proptype enum
         private GameObject currentlyPlacing = null;
         private bool isLoading = false;
+        private bool isEditing;
         
         public Dictionary<GameObject, string> SpawnedProps => spawnedProps;
         public GameObject CurrentlyPlacing => currentlyPlacing;
@@ -134,6 +136,7 @@ namespace Gameplay
                 }
                 
                 currentlyPlacing = null;
+                isEditing = false;
             };
         }
         
@@ -158,6 +161,7 @@ namespace Gameplay
             DestroyProp(currentlyPlacing);
             ToggleEditUI(false);
             currentlyPlacing = null;
+            isEditing = false;
         }
 
         private void ConfirmPlacePropButton()
@@ -181,6 +185,8 @@ namespace Gameplay
             {
                 if (spawnedProps.ContainsKey(hit.transform.gameObject))
                     return;
+
+                if (IsPointerOverUIObject() && isEditing) return;
                 
                 Vector3 objPos = hit.point;
                 objPos.y += 2f;
@@ -193,7 +199,7 @@ namespace Gameplay
         {
             if (currentlyPlacing) return;
             if (!Pointer.current.press.wasPressedThisFrame) return;
-            
+
             Ray ray = mainCamera.ScreenPointToRay(Pointer.current.position.ReadValue());
 
             if (Physics.Raycast(ray, out var hit))
@@ -201,9 +207,12 @@ namespace Gameplay
                 if (!spawnedProps.ContainsKey(hit.transform.gameObject)) return;
 
                 GameObject selectedObj = hit.transform.gameObject;
+
                 Rigidbody rb = selectedObj.GetComponent<Rigidbody>();
                 rb.isKinematic = true;
                 rb.constraints = RigidbodyConstraints.FreezeRotation;
+
+                isEditing = true;
 
                 selectedObj.transform.DOMoveY(selectedObj.transform.position.y + 2, animSpeed).SetEase(easeType).onComplete +=
                     () =>
@@ -213,5 +222,15 @@ namespace Gameplay
                     };
             }
         }
+        
+        private bool IsPointerOverUIObject()
+        {
+            var touchPosition = Touchscreen.current.position.ReadValue();
+            var eventData = new PointerEventData(EventSystem.current) {position = touchPosition};
+            var results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventData, results);
+            return results.Count > 0;
+        }
+
     }
 }
