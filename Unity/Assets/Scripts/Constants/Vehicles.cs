@@ -46,7 +46,7 @@ namespace Constants
             {VehicleType.Monster_Truck_9A, "Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_9A.prefab"},
             {VehicleType.Monster_Truck_9B, "Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_9B.prefab"},
             {VehicleType.Monster_Truck_10A, "Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_10A.prefab"},
-            {VehicleType.Monster_Truck_10B, "Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_10B.prefab"},
+            {VehicleType.Monster_Truck_10B, "Askk,msets/Prefabs/Cars/Monster Trucks/Monster_Truck_10B.prefab"},
             {VehicleType.Monster_Truck_11A, "Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_11A.prefab"},
             {VehicleType.Monster_Truck_11B, "Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_11B.prefab"},
             {VehicleType.Monster_Truck_12A, "Assets/Prefabs/Cars/Monster Trucks/Monster_Truck_12A.prefab"},

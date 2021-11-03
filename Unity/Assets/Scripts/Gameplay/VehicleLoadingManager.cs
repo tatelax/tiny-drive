@@ -8,11 +8,20 @@ namespace Gameplay
 {
     public class VehicleLoadingManager : MonoBehaviour
     {
+        [Header("References")]
+        [SerializeField] private SoundFXManager soundFxManager;
+        [SerializeField] private GameObject loadingSpinner;
+        
         private GameObject currVehicle = null;
 
         private bool isLoading = false;
         
         public GameObject CurrVehicle => currVehicle;
+
+        private void Awake()
+        {
+            loadingSpinner.SetActive(false);
+        }
 
         /// <summary>
         /// Loads vehicles. Not necessary to call this. Instead use placement manager
@@ -36,6 +45,8 @@ namespace Gameplay
             
             Debug.Log($"Instantiating new vehicle of type {vehicleType}");
 
+            loadingSpinner.SetActive(true);
+            
             Addressables.InstantiateAsync(Vehicles.VehicleDict[vehicleType], Vector3.zero, Quaternion.identity)
                 .Completed += OnCompleted;
         }
@@ -52,6 +63,8 @@ namespace Gameplay
         {
             isLoading = false;
             currVehicle = obj.Result;
+            loadingSpinner.SetActive(false);
+            soundFxManager.Play(soundFxManager.vehicleLoad);
             Debug.Log($"Vehicle instantiating for {currVehicle.name} complete");
         }
     }

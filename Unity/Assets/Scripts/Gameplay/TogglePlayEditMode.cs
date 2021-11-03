@@ -14,8 +14,9 @@ namespace Gameplay
         [SerializeField] private Color playModeColor;
         [SerializeField] private string enterEditModeText = "Edit";
         [SerializeField] private string enterPlayModeText = "GO!";
-        
+
         [Header("References")]
+        [SerializeField] private SoundFXManager soundFXManager;
         [SerializeField] private Button togglePlayEditButton;
         [SerializeField] private TextMeshProUGUI toggleButtonText;
         [SerializeField] private Image toggleButtonBg;
@@ -55,6 +56,8 @@ namespace Gameplay
             {
                 HandleEnterPlayMode();
             }
+            
+            soundFXManager.Play(soundFXManager.toggleEditMode);
         }
 
         private void HandleEnterPlayMode()

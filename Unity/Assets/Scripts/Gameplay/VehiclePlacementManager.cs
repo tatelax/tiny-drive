@@ -11,6 +11,7 @@ namespace Gameplay
     {
         [Header("References")]
         [SerializeField] private VehicleLoadingManager vehicleLoadingManager;
+        [SerializeField] private SoundFXManager soundFXManager;
         [SerializeField] private Camera arCamera;
 
         private Vehicles.VehicleType lastVehicleType;
@@ -54,6 +55,7 @@ namespace Gameplay
             isPlacing = false;
             vehicleLoadingManager.CurrVehicle.GetComponent<VehiclePlacementHandler>().Release();
             ReleaseVehicleEvent?.Invoke();
+            soundFXManager.Play(soundFXManager.vehicleRelease);
         }
 
         private void Update()

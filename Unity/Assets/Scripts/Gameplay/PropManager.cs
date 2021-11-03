@@ -25,6 +25,7 @@ namespace Gameplay
         [SerializeField] private Button confirmButton;
         [SerializeField] private Button deleteButton;
         [SerializeField] private GameObject[] uiToIgnoreWhenRaycasting;
+        [SerializeField] private SoundFXManager soundFxManager;
         
         private PropSpawnButtonData[] propSpawnButtons;
         private Dictionary<GameObject, string> spawnedProps; //key: gameobject itself | value: proptype enum
@@ -138,6 +139,7 @@ namespace Gameplay
                     }
                 }
                 
+                soundFxManager.Play(soundFxManager.placeProp);
                 objToPlace = null;
             };
         }
@@ -184,6 +186,7 @@ namespace Gameplay
                     {
                         currentlyPlacing = hit.transform.gameObject;
                         ToggleEditUI(true);
+                        soundFxManager.Play(soundFxManager.placeProp);
                     };
             }
         }
@@ -216,6 +219,7 @@ namespace Gameplay
         {
             Addressables.ReleaseInstance(obj);
             spawnedProps.Remove(obj);
+            soundFxManager.Play(soundFxManager.destroyProp);
         }
 
         public void ClearAllProps()
