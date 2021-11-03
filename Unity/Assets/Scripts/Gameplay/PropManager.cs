@@ -24,12 +24,14 @@ namespace Gameplay
         [SerializeField] private GameObject editUIParent;
         [SerializeField] private Button confirmButton;
         [SerializeField] private Button deleteButton;
+        [SerializeField] private GameObject[] uiToIgnoreWhenRaycasting;
         
         private PropSpawnButtonData[] propSpawnButtons;
         private Dictionary<GameObject, string> spawnedProps; //key: gameobject itself | value: proptype enum
         private GameObject currentlyPlacing = null;
         private bool isLoading = false;
         private bool isEditing;
+        private bool isAnimating;
         
         public Dictionary<GameObject, string> SpawnedProps => spawnedProps;
         public GameObject CurrentlyPlacing => currentlyPlacing;
@@ -118,6 +120,8 @@ namespace Gameplay
             
             float endYPos = currentlyPlacing.transform.position.y - 1.99f; // 0.01f offset to fix z fighting
 
+            isAnimating = true;
+            
             currentlyPlacing.transform.DOMoveY(endYPos, animSpeed).SetEase(easeType).onComplete += () =>
             {
                 if (currentlyPlacing.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))
@@ -137,6 +141,7 @@ namespace Gameplay
                 
                 currentlyPlacing = null;
                 isEditing = false;
+                isAnimating = false;
             };
         }
         
@@ -186,7 +191,7 @@ namespace Gameplay
                 if (spawnedProps.ContainsKey(hit.transform.gameObject))
                     return;
 
-                if (IsPointerOverUIObject() && isEditing) return;
+                if (IsPointerOverUIObject() || isAnimating) return;
                 
                 Vector3 objPos = hit.point;
                 objPos.y += 2f;
@@ -229,7 +234,21 @@ namespace Gameplay
             var eventData = new PointerEventData(EventSystem.current) {position = touchPosition};
             var results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventData, results);
-            return results.Count > 0;
+
+            for (var i = 0; i < results.Count; i++)
+            {
+                for (var i1 = 0; i1 < uiToIgnoreWhenRaycasting.Length; i1++)
+                {
+                    Debug.Log(results[i].gameObject.name + " | " + uiToIgnoreWhenRaycasting[i1].name);
+                    
+                    if (results[i].gameObject.name == uiToIgnoreWhenRaycasting[i1].name)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
     }
