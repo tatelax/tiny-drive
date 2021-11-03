@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000012143080854}
   - component: {fileID: 23000012643282362}
   - component: {fileID: 65000010866344538}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 33000013932837448}
   - component: {fileID: 23000011073764356}
   - component: {fileID: 65000011357101764}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 33000014039755322}
   - component: {fileID: 23000011735336468}
   - component: {fileID: 65000014215766752}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 33000011054132264}
   - component: {fileID: 23000013888695290}
   - component: {fileID: 65000012603211128}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 33000012781112882}
   - component: {fileID: 23000013159033346}
   - component: {fileID: 65000014020457932}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 33000010682715178}
   - component: {fileID: 23000013103756744}
   - component: {fileID: 65000013143633574}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 33000012950562444}
   - component: {fileID: 23000013823248730}
   - component: {fileID: 64000011223247450}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Garage_1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 33000014125606570}
   - component: {fileID: 23000012403125186}
   - component: {fileID: 65000012893090994}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 33000012416213138}
   - component: {fileID: 23000011627869106}
   - component: {fileID: 65000011848655362}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 33000012172181220}
   - component: {fileID: 23000010398035164}
   - component: {fileID: 65000011620748152}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Addon_Gate_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

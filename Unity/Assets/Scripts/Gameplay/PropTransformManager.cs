@@ -7,7 +7,7 @@ namespace Gameplay
     public class PropTransformManager : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private PropSpawnManager propSpawnManager;
+        [SerializeField] private PropManager propManager;
         [SerializeField] private float minScale, maxScale;
 
         private RotateGestureRecognizer rotationGesture;
@@ -39,26 +39,26 @@ namespace Gameplay
         
         private void RotationGesture_Updated(DigitalRubyShared.GestureRecognizer gesture)
         {
-            if (!propSpawnManager.CurrentlyPlacing) return;
+            if (!propManager.CurrentlyPlacing) return;
             
             if (gesture.State == GestureRecognizerState.Executing)
             {
-                Vector3 newRot = propSpawnManager.CurrentlyPlacing.transform.rotation.eulerAngles;
+                Vector3 newRot = propManager.CurrentlyPlacing.transform.rotation.eulerAngles;
                 newRot.y -= rotationGesture.RotationDegreesDelta;
-                propSpawnManager.CurrentlyPlacing.transform.rotation = Quaternion.Euler(newRot);
+                propManager.CurrentlyPlacing.transform.rotation = Quaternion.Euler(newRot);
             }
         }
         
         private void ScaleGesture_Updated(GestureRecognizer gesture)
         {
-            if (!propSpawnManager.CurrentlyPlacing) return;
+            if (!propManager.CurrentlyPlacing) return;
             
             if (gesture.State == GestureRecognizerState.Executing)
             {
-                Vector3 currScale = propSpawnManager.CurrentlyPlacing.transform.localScale;
+                Vector3 currScale = propManager.CurrentlyPlacing.transform.localScale;
                 
                 if(currScale.x > minScale && currScale.x < maxScale)
-                    propSpawnManager.CurrentlyPlacing.transform.localScale *= scaleGesture.ScaleMultiplier;
+                    propManager.CurrentlyPlacing.transform.localScale *= scaleGesture.ScaleMultiplier;
             }
         }
     }

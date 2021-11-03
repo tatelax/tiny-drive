@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2592481158960346829}
   - component: {fileID: 64007502366212010}
   - component: {fileID: 633725732285670136}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Dirt_Ramp_1C
   m_TagString: Untagged
   m_Icon: {fileID: 0}

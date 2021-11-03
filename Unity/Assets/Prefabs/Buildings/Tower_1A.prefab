@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000010797323400}
   - component: {fileID: 23000012923769216}
   - component: {fileID: 95000012958965566}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Rotating_Platform_1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 33000011019111710}
   - component: {fileID: 23000010131453408}
   - component: {fileID: 3348004322972533408}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tower_1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}

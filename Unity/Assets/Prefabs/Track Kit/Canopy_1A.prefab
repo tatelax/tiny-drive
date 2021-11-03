@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4000012875360590}
   - component: {fileID: 33000011659165806}
   - component: {fileID: 23000014015391528}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Canopy_1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}

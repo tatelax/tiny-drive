@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace Gameplay
 {
-    public class PropSpawnManager : MonoBehaviour
+    public class PropManager : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private Transform propSpawnParent;
@@ -19,18 +19,22 @@ namespace Gameplay
         [SerializeField] private Ease easeType;
         [SerializeField] private float animSpeed = 0.2f;
         [SerializeField] private Button toggleEditModeButton;
+        [SerializeField] private Camera mainCamera;
+        [SerializeField] private GameObject editUIParent;
+        [SerializeField] private Button confirmButton;
+        [SerializeField] private Button deleteButton;
         
         private PropSpawnButtonData[] propSpawnButtons;
-        private Dictionary<GameObject, string> spawnedObjects; //key: gameobject itself | value: proptype enum
+        private Dictionary<GameObject, string> spawnedProps; //key: gameobject itself | value: proptype enum
         private GameObject currentlyPlacing = null;
         private bool isLoading = false;
         
-        public Dictionary<GameObject, string> SpawnedObjects => spawnedObjects;
+        public Dictionary<GameObject, string> SpawnedProps => spawnedProps;
         public GameObject CurrentlyPlacing => currentlyPlacing;
         
         private void Start()
         {
-            spawnedObjects = new Dictionary<GameObject, string>();
+            spawnedProps = new Dictionary<GameObject, string>();
 
             propSpawnButtons = propSpawnButtonsHolder.GetComponentsInChildren<PropSpawnButtonData>();
 
@@ -53,6 +57,11 @@ namespace Gameplay
                     PlaceObject();
                 };
             }
+            
+            ToggleEditUI(false);
+            
+            deleteButton.onClick.AddListener(DeletePropButton);
+            confirmButton.onClick.AddListener(ConfirmPlacePropButton);
         }
 
         private void SetButtonsInteractable(bool state)
@@ -67,9 +76,8 @@ namespace Gameplay
 
         private void Update()
         {
-            if (!currentlyPlacing) return;
-            
             HandlePlacing();
+            HandleEditingExisting();
         }
 
         public void SpawnProp(string propAddress, Vector3 position, Quaternion rotation, bool shouldPlace = true)
@@ -79,7 +87,7 @@ namespace Gameplay
 
             Addressables.InstantiateAsync(propAddress, position, rotation, propSpawnParent).Completed += handle =>
             {
-                spawnedObjects.Add(handle.Result, propAddress);
+                spawnedProps.Add(handle.Result, propAddress);
                 isLoading = false;
 
                 if (handle.Result.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))
@@ -129,29 +137,80 @@ namespace Gameplay
             };
         }
         
-        private void DestroyObj(GameObject obj)
+        private void DestroyProp(GameObject obj)
         {
             Addressables.ReleaseInstance(obj);
+            spawnedProps.Remove(obj);
         }
 
         public void ClearAllProps()
         {
             for (int i = 0; i < propSpawnParent.childCount; i++)
             {
-                DestroyObj(propSpawnParent.GetChild(i).gameObject);
+                DestroyProp(propSpawnParent.GetChild(i).gameObject);
             }
+            
+            spawnedProps.Clear();
+        }
+        
+        private void DeletePropButton()
+        {
+            DestroyProp(currentlyPlacing);
+            ToggleEditUI(false);
+            currentlyPlacing = null;
+        }
+
+        private void ConfirmPlacePropButton()
+        {
+            PlaceObject();
+            ToggleEditUI(false);
+        }
+
+        private void ToggleEditUI(bool setting)
+        {
+            editUIParent.SetActive(setting);
         }
         
         private void HandlePlacing()
         {
-            Ray ray = Camera.main.ScreenPointToRay(Pointer.current.position.ReadValue());
+            if (!currentlyPlacing) return;
+            
+            Ray ray = mainCamera.ScreenPointToRay(Pointer.current.position.ReadValue());
 
             if (Physics.Raycast(ray, out var hit))
             {
+                if (spawnedProps.ContainsKey(hit.transform.gameObject))
+                    return;
+                
                 Vector3 objPos = hit.point;
                 objPos.y += 2f;
                 
                 currentlyPlacing.transform.position = objPos;
+            }
+        }
+        
+        private void HandleEditingExisting()
+        {
+            if (currentlyPlacing) return;
+            if (!Pointer.current.press.wasPressedThisFrame) return;
+            
+            Ray ray = mainCamera.ScreenPointToRay(Pointer.current.position.ReadValue());
+
+            if (Physics.Raycast(ray, out var hit))
+            {
+                if (!spawnedProps.ContainsKey(hit.transform.gameObject)) return;
+
+                GameObject selectedObj = hit.transform.gameObject;
+                Rigidbody rb = selectedObj.GetComponent<Rigidbody>();
+                rb.isKinematic = true;
+                rb.constraints = RigidbodyConstraints.FreezeRotation;
+
+                selectedObj.transform.DOMoveY(selectedObj.transform.position.y + 2, animSpeed).SetEase(easeType).onComplete +=
+                    () =>
+                    {
+                        currentlyPlacing = hit.transform.gameObject;
+                        ToggleEditUI(true);
+                    };
             }
         }
     }

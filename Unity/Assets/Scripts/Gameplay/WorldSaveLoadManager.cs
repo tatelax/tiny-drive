@@ -15,7 +15,7 @@ namespace Gameplay
         [SerializeField] private Transform propParent;
         [SerializeField] private Button saveButton;
         [SerializeField] private Button loadButton;
-        [SerializeField] private PropSpawnManager propSpawnManager;
+        [SerializeField] private PropManager propManager;
         [SerializeField] private ARWorldMapController arWorldMapController;
 
         private const string FolderName = "SaveData";
@@ -41,7 +41,7 @@ namespace Gameplay
                 Vector3 rotation = child.rotation.eulerAngles;
                 
                 Prop prop = new Prop(child.name, 
-                    propSpawnManager.SpawnedObjects[child.gameObject],
+                    propManager.SpawnedProps[child.gameObject],
                     position.x,
                     position.y,
                     position.z,
@@ -60,7 +60,7 @@ namespace Gameplay
 
         private async void Load()
         {
-            propSpawnManager.ClearAllProps();
+            propManager.ClearAllProps();
 
             Task<string> json = ReadSavedData(FolderName, "helloworld");
             string result = await json;
@@ -75,7 +75,7 @@ namespace Gameplay
                 Vector3 position = new Vector3(prop.posX, prop.posY, prop.posZ);
                 Quaternion rotation = Quaternion.identity;
 
-                propSpawnManager.SpawnProp(prop.propAddress, position, rotation, false);
+                propManager.SpawnProp(prop.propAddress, position, rotation, false);
             }
         }
 
