@@ -836,7 +836,7 @@ MonoBehaviour:
     collisionIgnoreTags:
     - Wheel
     collisionTimeout: 0.8
-    damageIntensity: 1
+    damageIntensity: 0
     decelerationThreshold: 500
     deformationIgnoreTags:
     - Wheel
@@ -844,7 +844,7 @@ MonoBehaviour:
     deformationRandomness: 0.01
     deformationStrength: 1
     deformationVerticesPerFrame: 8000
-    meshDeform: 1
+    meshDeform: 0
     OnCollision:
       m_PersistentCalls:
         m_Calls: []
@@ -1102,7 +1102,7 @@ MonoBehaviour:
       forcedInduction:
         boost: 0
         forcedInductionType: 0
-        hasWastegate: 1
+        hasWastegate: 0
         powerGainMultiplier: 1.4
         spoolUpTime: 0.12
         useForcedInduction: 1
@@ -1621,7 +1621,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    steeringWheel: {fileID: 0}
+    steeringWheel: {fileID: 4000013642874580}
     steeringWheelTurnRatio: 5
   enginePosition: {x: 0, y: 0.4, z: 1.5}
   exhaustPosition: {x: 0, y: 0.1, z: -2}

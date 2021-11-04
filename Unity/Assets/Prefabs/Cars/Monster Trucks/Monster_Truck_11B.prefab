@@ -1162,7 +1162,7 @@ MonoBehaviour:
     collisionIgnoreTags:
     - Wheel
     collisionTimeout: 0.8
-    damageIntensity: 1
+    damageIntensity: 0
     decelerationThreshold: 500
     deformationIgnoreTags:
     - Wheel
@@ -1170,7 +1170,7 @@ MonoBehaviour:
     deformationRandomness: 0.01
     deformationStrength: 1
     deformationVerticesPerFrame: 8000
-    meshDeform: 1
+    meshDeform: 0
     OnCollision:
       m_PersistentCalls:
         m_Calls: []
