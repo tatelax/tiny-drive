@@ -81,6 +81,303 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &164839164058257437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1659126417056657544}
+  - component: {fileID: 6459509269595382141}
+  m_Layer: 0
+  m_Name: Wheel_4C_R.L_WheelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1659126417056657544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164839164058257437}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.0179032, y: 0.6199997, z: -1.2505587}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1964725254}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6459509269595382141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164839164058257437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc64011ec59d184a9dc2eabf8397a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showAdvancedSettings: 0
+  spring:
+    bottomedOut: 0
+    compressionPercent: 0
+    force: 0
+    forceCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    length: 0
+    maxForce: 8307
+    maxLength: 0.329
+    overExtended: 0
+    prevLength: 0
+    targetPoint: {x: 0, y: 0, z: 0}
+    velocity: 0
+  damper:
+    bumpForce: 1346.0521
+    bumpCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    reboundCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    force: 0
+    reboundForce: 1749.8677
+  wheel:
+    angularVelocity: 0
+    brakeTorque: 0
+    camberAngle: 0
+    camberAtBottom: 0
+    camberAtTop: 0
+    forward: {x: 0, y: 0, z: 1}
+    inertia: 0
+    baseInertia: 0
+    inside: {x: 0, y: 0, z: 0}
+    load: 0
+    mass: 17.333334
+    motorTorque: 0
+    nonRotatingPositionOffset: {x: 0, y: 0, z: 0}
+    radius: 0.4199995
+    right: {x: 1, y: 0, z: 0}
+    rimColliderGO: {fileID: 0}
+    rimOffset: 0
+    rotationAngle: 0
+    RPM: 0
+    steerAngle: 0
+    up: {x: 0, y: 1, z: 0}
+    visualPositionOffset: {x: 0, y: 0, z: 0}
+    visualRotationOffset: {x: 0, y: 0, z: 0}
+    width: 0.45009217
+    worldPosition: {x: -1.0179032, y: 0.41999972, z: -1.2505587}
+    smoothYPosition: 0
+    prevAngularVelocity: 0
+    worldRotation: {x: 0, y: 0, z: 0, w: 0}
+    nonRotatingVisual: {fileID: 0}
+    visual: {fileID: 1881217522128661306}
+  forwardFriction:
+    force: 0
+    forceCoefficient: 1
+    slip: 0
+    slipCoefficient: 1
+    speed: 0
+  sideFriction:
+    force: 0
+    forceCoefficient: 1
+    slip: 0
+    slipCoefficient: 1
+    speed: 0
+  activeFrictionPreset: {fileID: 11400000, guid: 99d32cdf55d3d6541a201d4e6306e35e,
+    type: 2}
+  applyForceToOthers: 0
+  autoSetupLayerMask: 1
+  debug: 0
+  dragTorque: 10
+  hasHit: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  parent: {fileID: 1729474830761992190}
+  parentNRigidbody: {fileID: 1834199369533421301}
+  parentRigidbody: {fileID: 5476392002664312214}
+  singleRay: 0
+  squat: 0.1
+  useRimCollider: 1
+  vehicleSide: -1
+  vehicleWheelCount: 0
+  visualOnlyUpdate: 0
+  powertrainCounterTorque: 0
+  slipCircleShape: 1.05
+  curveBasedLoadCoefficient: 0
+  loadFrictionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.3431895
+      outSlope: 1.3431895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2000
+      value: 2686.379
+      inSlope: 1.3431895
+      outSlope: 1.3431895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4000
+      value: 4716.7
+      inSlope: 1.0151607
+      outSlope: 1.0151607
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 6000
+      value: 6251.1846
+      inSlope: 0.7672422
+      outSlope: 0.7672422
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 8000
+      value: 7410.9224
+      inSlope: 0.5798689
+      outSlope: 0.5798689
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10000
+      value: 8287.434
+      inSlope: 0.4382556
+      outSlope: 0.4382556
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 12000
+      value: 8949.887
+      inSlope: 0.33122656
+      outSlope: 0.33122656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 14000
+      value: 9450.558
+      inSlope: 0.25033545
+      outSlope: 0.25033545
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 16000
+      value: 9828.956
+      inSlope: 0.18919922
+      outSlope: 0.18919922
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 18000
+      value: 10114.944
+      inSlope: 0.14299414
+      outSlope: 0.14299414
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  depenetrationSpring: 1
+  depenetrationDamping: 1
+  lateralScanResolution: 3
+  longitudinalScanResolution: 8
+  suspensionForceMagnitude: 0
 --- !u!1 &1123753647072307751
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,9 +471,13 @@ GameObject:
   - component: {fileID: 8062123624932755076}
   - component: {fileID: 6151277854669220900}
   - component: {fileID: 2537832641675776861}
+  - component: {fileID: 5476392002664312214}
+  - component: {fileID: 1834199369533421301}
+  - component: {fileID: 65476892999317365}
+  - component: {fileID: -3478357277478541054}
   m_Layer: 2
   m_Name: Rally_Car_4C
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,6 +504,10 @@ Transform:
   - {fileID: 1301045938979760431}
   - {fileID: 1113241878444692803}
   - {fileID: 2240984753611685165}
+  - {fileID: 5894508721772025568}
+  - {fileID: 1322577826157980374}
+  - {fileID: 1659126417056657544}
+  - {fileID: 2819765177884329069}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -268,6 +573,948 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.3343868, y: 1.6274395, z: 4.789871}
   m_Center: {x: 0, y: 1.0446141, z: 0.24721134}
+--- !u!54 &5476392002664312214
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729474830761992190}
+  serializedVersion: 2
+  m_Mass: 1400
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1834199369533421301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729474830761992190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6287e0eb6309a54ab1e666dab693343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRigidbody: {fileID: 0}
+  targetTransform: {fileID: 0}
+  dt: 0
+  t: 0
+  mass: 0
+  angularDrag: 0
+  angularVelocity: {x: 0, y: 0, z: 0}
+  centerOfMass: {x: 0, y: 0, z: 0}
+  drag: 0
+  inertia: {x: 0, y: 0, z: 0}
+  nPosition: {x: 0, y: 0, z: 0}
+  nRotation: {x: 0, y: 0, z: 0, w: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  useGravity: 0
+  localToWorldMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  substeps: 4
+--- !u!114 &65476892999317365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729474830761992190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef33320c8b07754cbbcaa651106e4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSleep:
+    m_PersistentCalls:
+      m_Calls: []
+  onWake:
+    m_PersistentCalls:
+      m_Calls: []
+  vehicleRigidbody: {fileID: 5476392002664312214}
+  vehicleTransform: {fileID: 0}
+  cameraInsideVehicle: 0
+  onSetMultiplayerInstanceType:
+    m_PersistentCalls:
+      m_Calls: []
+  awakeOnStart: 1
+  isAwake: 1
+  brakes:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+    brakeOffThrottle: 0
+    brakeOffThrottleStrength: 0.2
+    brakeWhileAsleep: 1
+    brakeWhileIdle: 1
+    maxTorque: 1820
+    handbrakeType: 0
+    handbrakeValue: 0
+    smoothing: 0
+    onBrakesActivate:
+      m_PersistentCalls:
+        m_Calls: []
+    onBrakesDeactivate:
+      m_PersistentCalls:
+        m_Calls: []
+  damageHandler:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+    collisionIgnoreTags:
+    - Wheel
+    collisionTimeout: 0.8
+    damageIntensity: 1
+    decelerationThreshold: 500
+    deformationIgnoreTags:
+    - Wheel
+    deformationRadius: 0.4
+    deformationRandomness: 0.01
+    deformationStrength: 1
+    deformationVerticesPerFrame: 8000
+    meshDeform: 1
+    OnCollision:
+      m_PersistentCalls:
+        m_Calls: []
+    smokeParticleSystems: []
+    visualOnly: 0
+    lastCollisionTime: -1
+  effectsManager:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+    exhaustFlash:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      flash: 0
+      flashLights: []
+      flashOnRevLimiter: 1
+      flashOnShift: 1
+      flashTextures: []
+      meshRenderers: []
+    exhaustSmoke:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      lifetimeDistance: 0.4
+      sootIntensity: 0.4
+      maxSpeedMultiplier: 1.4
+      maxSizeMultiplier: 1.2
+      normalColor: {r: 0.6, g: 0.6, b: 0.6, a: 0.3}
+      sootColor: {r: 0.1, g: 0.1, b: 0.8, a: 1}
+      particleSystems: []
+    lightsManager:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      brakeLights:
+        lightSources: []
+      extraLights:
+        lightSources: []
+      highBeamLights:
+        lightSources: []
+      leftBlinkers:
+        lightSources: []
+      lowBeamLights:
+        lightSources: []
+      reverseLights:
+        lightSources: []
+      rightBlinkers:
+        lightSources: []
+      tailLights:
+        lightSources: []
+    skidmarkManager:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      globalSkidmarkIntensity: 0.6
+      groundOffset: 0.025
+      lowerIntensityThreshold: 0.05
+      maxTrisPerSection: 360
+      maxTotalTris: 1440
+      maxSkidmarkAlpha: 0.6
+      minDistance: 0.12
+      skidmarkDestroyDistance: 100
+      skidmarkDestroyTime: 0
+      smoothing: 0.07
+      skidmarkContainer: {fileID: 0}
+      fallbackMaterial: {fileID: 0}
+    surfaceParticleManager:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      lateralSlipParticleCoeff: 1
+      longitudinalSlipParticleCoeff: 1
+      particleSizeCoeff: 1
+      emissionRateCoeff: 1
+      binaryEmission: 0
+      particleCount: 0
+      particleSystems: []
+  groundDetection:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+    groundDetectionPreset: {fileID: 11400000, guid: cc613d2dd693174489f0c31017ff4d8a,
+      type: 2}
+  input:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+    autoSetInput: 1
+    states:
+      steering: 0
+      throttle: 0
+      brakes: 0
+      clutch: 0
+      engineStartStop: 0
+      extraLights: 0
+      highBeamLights: 0
+      handbrake: 0
+      hazardLights: 0
+      horn: 0
+      leftBlinker: 0
+      lowBeamLights: 0
+      rightBlinker: 0
+      shiftDown: 0
+      shiftInto: 0
+      shiftUp: 0
+      trailerAttachDetach: 0
+      cruiseControl: 0
+      boost: 0
+      flipOver: 0
+    swapInputInReverse: 1
+    invertSteering: 0
+    invertThrottle: 0
+    invertBrakes: 0
+    invertClutch: 0
+    invertHandbrake: 0
+    deadzone: 0.03
+  moduleManager:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+  powertrain:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+    clutch:
+      angularVelocity: 0
+      inertia: 0.011
+      name: Clutch
+      componentInputIsNull: 0
+      outputASelector:
+        name: Transmission
+      baseEngagementRPM: 780.00006
+      clutchEngagement: 0
+      finalEngagementRPM: 2000
+      fwdAcceleration: 0
+      gear: 0
+      isAutomatic: 1
+      engagementSpeed: 1
+      PID_Kd: 0.4
+      PID_Ki: 3.6
+      PID_Kp: 5
+      shiftSignal: 0
+      startSignal: 0
+      slipTorque: 213.63472
+      variableEngagementRPMRange: 364
+    differentials:
+    - angularVelocity: 0
+      inertia: 0.02
+      name: Front Differential
+      componentInputIsNull: 0
+      outputASelector:
+        name: WheelWheel_4C_F.L_WheelController
+      biasAB: 0.5
+      coastRamp: 0.5
+      differentialType: 0
+      outputB:
+        angularVelocity: 0
+        inertia: 0.02
+        name: 
+        componentInputIsNull: 0
+        outputASelector:
+          name: 
+      powerRamp: 1
+      preload: 10
+      slipTorque: 1000
+      stiffness: 0.1
+      outputBSelector:
+        name: WheelWheel_4C_F.R_WheelController
+    - angularVelocity: 0
+      inertia: 0.02
+      name: Rear Differential
+      componentInputIsNull: 0
+      outputASelector:
+        name: WheelWheel_4C_R.L_WheelController
+      biasAB: 0.5
+      coastRamp: 0.5
+      differentialType: 0
+      outputB:
+        angularVelocity: 0
+        inertia: 0.02
+        name: 
+        componentInputIsNull: 0
+        outputASelector:
+          name: 
+      powerRamp: 1
+      preload: 10
+      slipTorque: 1000
+      stiffness: 0.1
+      outputBSelector:
+        name: WheelWheel_4C_R.R_WheelController
+    - angularVelocity: 0
+      inertia: 0.02
+      name: Center Differential
+      componentInputIsNull: 0
+      outputASelector:
+        name: Front Differential
+      biasAB: 0
+      coastRamp: 0.5
+      differentialType: 0
+      outputB:
+        angularVelocity: 0
+        inertia: 0.02
+        name: 
+        componentInputIsNull: 0
+        outputASelector:
+          name: 
+      powerRamp: 1
+      preload: 10
+      slipTorque: 1000
+      stiffness: 0.1
+      outputBSelector:
+        name: Rear Differential
+    engine:
+      angularVelocity: 0
+      inertia: 0.22
+      name: Engine
+      componentInputIsNull: 0
+      outputASelector:
+        name: Clutch
+      autoStartOnThrottle: 1
+      clutchEnagagement: 1
+      engineLayout: 0
+      engineType: 0
+      forcedInduction:
+        boost: 0
+        forcedInductionType: 0
+        hasWastegate: 1
+        powerGainMultiplier: 1.4
+        spoolUpTime: 0.12
+        useForcedInduction: 0
+        wastegateBoost: 0
+        wastegateFlag: 0
+      generatedPower: 0
+      idleRPM: 900
+      ignition: 1
+      isStalling: 0
+      lossTorque: 0
+      maxLossTorque: 48
+      maxPower: 80
+      maxRPM: 5200
+      minRPM: -50
+      OnRevLimiter:
+        m_PersistentCalls:
+          m_Calls: []
+      OnStart:
+        m_PersistentCalls:
+          m_Calls: []
+      OnStop:
+        m_PersistentCalls:
+          m_Calls: []
+      flyingStartEnabled: 0
+      powerCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 5
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.25
+          value: 0.7
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5
+          value: 0.8
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      revLimiterActive: 0
+      revLimiterCutoffDuration: 0
+      revLimiterEnabled: 1
+      revLimiterRPM: 4888
+      shiftSignal: 0
+      slipTorque: 9999
+      stallingEnabled: 1
+      stallRPM: 300
+      starterActive: 0
+      starterRPMLimit: 600
+      starterRunTime: 1
+      starterTorque: 60
+      throttlePosition: 1
+      powerModifierSum: 0
+    transmission:
+      angularVelocity: 0
+      inertia: 0.011
+      name: Transmission
+      componentInputIsNull: 0
+      outputASelector:
+        name: Center Differential
+      holdToKeepInGear: 0
+      finalGearRatio: 4.438928
+      gearingProfile: {fileID: 11400000, guid: 5e1d2b36c53bd1741bea9c2c902f03ad, type: 2}
+      inclineEffectCoeff: 0
+      cvtMaxInputTorque: 2060.3074
+      onDownshift:
+        m_PersistentCalls:
+          m_Calls: []
+      onShift:
+        m_PersistentCalls:
+          m_Calls: []
+      onUpshift:
+        m_PersistentCalls:
+          m_Calls: []
+      postShiftBan: 0.45000002
+      automaticTransmissionReverseType: 0
+      revMatch: 1
+      shiftCheckCooldown: 0.1
+      shiftCheckValid: 1
+      shiftDuration: 0.15
+      variableShiftIntensity: 0.3
+      ignorePostShiftBanInManual: 1
+      variableShiftPoint: 1
+      ratio: 0
+      _currentGearIndex: 0
+      _downshiftRPM: 1040
+      _targetDownshiftRPM: 0
+      _targetUpshiftRPM: 0
+      _transmissionType: 2
+      _upshiftRPM: 3744.0002
+      clutchEngaged: 0
+      externalShiftChecksValid: 1
+      noWheelAir: 0
+      noWheelSkid: 0
+      noWheelSpin: 0
+    wheelGroups:
+    - ackermanPercent: 0.12
+      antiRollBarForce: 4200
+      brakeCoefficient: 1
+      camberAtBottom: 1
+      camberAtTop: -5
+      casterAngle: 0
+      handbrakeCoefficient: 0
+      isSolid: 0
+      name: Front Axle 0
+      trackWidth: 0
+      steerCoefficient: 1
+      toeAngle: 0
+      wheels: []
+    - ackermanPercent: 0
+      antiRollBarForce: 4200
+      brakeCoefficient: 0.7
+      camberAtBottom: 1
+      camberAtTop: -5
+      casterAngle: 0
+      handbrakeCoefficient: 1
+      isSolid: 0
+      name: Rear Axle 1
+      trackWidth: 0
+      steerCoefficient: 0
+      toeAngle: 0
+      wheels: []
+    wheels:
+    - angularVelocity: 0
+      inertia: 0.02
+      name: WheelWheel_4C_F.L_WheelController
+      componentInputIsNull: 0
+      outputASelector:
+        name: 
+      surfaceMapIndex: -1
+      surfacePreset: {fileID: 0}
+      wheelController: {fileID: 4435585863562308345}
+      wheelGroupSelector:
+        index: 0
+    - angularVelocity: 0
+      inertia: 0.02
+      name: WheelWheel_4C_F.R_WheelController
+      componentInputIsNull: 0
+      outputASelector:
+        name: 
+      surfaceMapIndex: -1
+      surfacePreset: {fileID: 0}
+      wheelController: {fileID: 3540263791461176308}
+      wheelGroupSelector:
+        index: 0
+    - angularVelocity: 0
+      inertia: 0.02
+      name: WheelWheel_4C_R.L_WheelController
+      componentInputIsNull: 0
+      outputASelector:
+        name: 
+      surfaceMapIndex: -1
+      surfacePreset: {fileID: 0}
+      wheelController: {fileID: 6459509269595382141}
+      wheelGroupSelector:
+        index: 1
+    - angularVelocity: 0
+      inertia: 0.02
+      name: WheelWheel_4C_R.R_WheelController
+      componentInputIsNull: 0
+      outputASelector:
+        name: 
+      surfaceMapIndex: -1
+      surfacePreset: {fileID: 0}
+      wheelController: {fileID: 4191550030071187796}
+      wheelGroupSelector:
+        index: 1
+    components: []
+  soundManager:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+    blinkerComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.8
+      clips:
+      - {fileID: 8300000, guid: 4a30f69cddd6ef54e84c4b6935a861df, type: 3}
+      container: {fileID: 0}
+      sources: []
+    brakeHissComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.1
+      clips:
+      - {fileID: 8300000, guid: ea83bc67e8a32164b8ccd0b8cb249630, type: 3}
+      container: {fileID: 0}
+      sources: []
+      minInterval: 4
+    dopplerLevel: 0
+    crashComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.4
+      clips:
+      - {fileID: 8300000, guid: cd188fb1d3e802347aef458cada843fd, type: 3}
+      container: {fileID: 0}
+      sources: []
+      pitchRandomness: 0.4
+      velocityMagnitudeEffect: 1
+    crashMixerGroup: {fileID: 0}
+    crashSourceGO: {fileID: 0}
+    engineFanComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.05
+      clips:
+      - {fileID: 8300000, guid: ce5e209836cb97e4fae5e93754fd5602, type: 3}
+      container: {fileID: 0}
+      sources: []
+      pitchRange: 0.5
+    engineMixerGroup: {fileID: 0}
+    engineRunningComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 0.4
+      baseVolume: 0.2
+      clips:
+      - {fileID: 8300000, guid: 656bace0bd427e7418a9495a91651eb1, type: 3}
+      container: {fileID: 0}
+      sources: []
+      maxDistortion: 0.4
+      pitchRange: 2.08
+      smoothing: 0.05
+      volumeRange: 0.1
+    engineSourceGO: {fileID: 0}
+    engineStartComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.2
+      clips:
+      - {fileID: 8300000, guid: d40fa21dff1e4064092d3df957cbc63e, type: 3}
+      container: {fileID: 0}
+      sources: []
+    exhaustSourceGO: {fileID: 0}
+    gearChangeComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 0.8
+      baseVolume: 0.16
+      clips:
+      - {fileID: 8300000, guid: 53a2bc904054cea4cb0a3554275715aa, type: 3}
+      container: {fileID: 0}
+      sources: []
+      randomPitchRange: 0.2
+      randomVolumeRange: 0.1
+    hornComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.1
+      clips:
+      - {fileID: 8300000, guid: 3028c86f6c3a29b4981722d5aafd7bb4, type: 3}
+      container: {fileID: 0}
+      sources: []
+    interiorAttenuation: -5
+    lowPassFrequency: 1600
+    lowPassQ: 1
+    masterGroup: {fileID: 0}
+    masterVolume: 1
+    mixer: {fileID: 24100000, guid: 4a45b12b36d160c41be1eea83586fbe7, type: 2}
+    otherMixerGroup: {fileID: 0}
+    otherSourceGO: {fileID: 0}
+    reverseBeepComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.1
+      clips:
+      - {fileID: 8300000, guid: 473e09b34553fad49a16a4a476eef88b, type: 3}
+      container: {fileID: 0}
+      sources: []
+      beepOnNegativeVelocity: 1
+      beepOnReverseGear: 1
+    spatialBlend: 1
+    surfaceNoiseMixerGroup: {fileID: 0}
+    suspensionBumpComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.12
+      clips:
+      - {fileID: 8300000, guid: f42fc0c5a45782343b4c11e3ef053f94, type: 3}
+      container: {fileID: 0}
+      sources: []
+    suspensionMixerGroup: {fileID: 0}
+    transmissionMixerGroup: {fileID: 0}
+    transmissionSourceGO: {fileID: 0}
+    transmissionWhineComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 0.18
+      baseVolume: 0.03
+      clips:
+      - {fileID: 8300000, guid: 15620b7f6c31e314f9c5d313bd8f1dec, type: 3}
+      container: {fileID: 0}
+      sources: []
+      maxSpeed: 80
+      offThrottleVolumeCoeff: 0.2
+      onThrottleVolumeCoeff: 1
+      pitchRange: 0.7
+      smoothing: 0.05
+    turboFlutterComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.05
+      clips:
+      - {fileID: 8300000, guid: fbc3347e118773e409df0b1d95db697e, type: 3}
+      container: {fileID: 0}
+      sources: []
+      pitchRandomnessRange: 0.3
+    turboMixerGroup: {fileID: 0}
+    turboWhistleComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 0
+      baseVolume: 0.08
+      clips:
+      - {fileID: 8300000, guid: 686ed42021a5f4c47b8908d49b23985d, type: 3}
+      container: {fileID: 0}
+      sources: []
+      pitchRange: 0.8
+    wheelSkidComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1.2
+      baseVolume: 0.5
+      clips: []
+      container: {fileID: 0}
+      sources: []
+    wheelTireNoiseComponent:
+      state:
+        fullName: 
+        isEnabled: 1
+        isOn: 1
+        lodIndex: -1
+        name: 
+      audioMixerGroup: {fileID: 0}
+      basePitch: 1
+      baseVolume: 0.4
+      clips: []
+      container: {fileID: 0}
+      sources: []
+  steering:
+    state:
+      fullName: 
+      isEnabled: 1
+      isOn: 1
+      lodIndex: -1
+      name: 
+    degreesPerSecondLimit: 180
+    useDirectInput: 0
+    linearity:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    maximumSteerAngle: 25
+    returnToCenter: 1
+    smoothing: 0.1
+    speedSensitiveSteeringCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.3
+        value: 0.4
+        inSlope: -0.6
+        outSlope: -0.6
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.2
+        inSlope: -0.1
+        outSlope: 0.1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    steeringWheel: {fileID: 0}
+    steeringWheelTurnRatio: 5
+  enginePosition: {x: 0, y: 0.4, z: 1.5}
+  exhaustPosition: {x: 0, y: 0.1, z: -2}
+  lateralSlipThreshold: 0.2
+  longitudinalSlipThreshold: 0.7
+  stateSettings: {fileID: 11400000, guid: 3404c49a4170ad94e87f0e8545b86758, type: 2}
+  transmissionPosition: {x: 0, y: 0.2, z: 0.2}
+  freezeWhileAsleep: 1
+  freezeWhileIdle: 1
+  vehicleNRigidbody: {fileID: 0}
+  lowSpeedSubsteps: 25
+  highSpeedSubsteps: 20
+  asleepSubsteps: 2
+  mass: 1300
+  maxAngularVelocity: 8
+  drag: 0
+  angularDrag: 0
+  physicsMaterial: {fileID: 13400000, guid: 22fc4cb3a07b34e4cbc20c64ac7bd3be, type: 2}
+  centerOfMass: {x: -0.0000011920929, y: 0.6406497, z: 0.14944124}
+  inertiaTensor: {x: 741.0867, y: 1270.3878, z: 272.68115}
+  vehicleDimensions: {x: 1.8, y: 1.4, z: 4.1}
+  interpolation: 1
+  updateLODs: 1
+  useCameraMainForLOD: 1
+  LODCamera: {fileID: 0}
+  wheelbase: 4
+--- !u!114 &-3478357277478541054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729474830761992190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d5e82550294b978189ef96921e427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coll: {fileID: 2537832641675776861}
 --- !u!1 &1881217522128661306
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +1677,600 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2225527889939798948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5894508721772025568}
+  - component: {fileID: 4435585863562308345}
+  m_Layer: 0
+  m_Name: Wheel_4C_F.L_WheelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5894508721772025568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225527889939798948}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9679021, y: 0.6199997, z: 1.5494412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1964725254}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4435585863562308345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225527889939798948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc64011ec59d184a9dc2eabf8397a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showAdvancedSettings: 0
+  spring:
+    bottomedOut: 0
+    compressionPercent: 0
+    force: 0
+    forceCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    length: 0
+    maxForce: 8307
+    maxLength: 0.329
+    overExtended: 0
+    prevLength: 0
+    targetPoint: {x: 0, y: 0, z: 0}
+    velocity: 0
+  damper:
+    bumpForce: 1346.0521
+    bumpCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    reboundCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    force: 0
+    reboundForce: 1749.8677
+  wheel:
+    angularVelocity: 0
+    brakeTorque: 0
+    camberAngle: 0
+    camberAtBottom: 0
+    camberAtTop: 0
+    forward: {x: 0, y: 0, z: 1}
+    inertia: 0
+    baseInertia: 0
+    inside: {x: 0, y: 0, z: 0}
+    load: 0
+    mass: 17.333334
+    motorTorque: 0
+    nonRotatingPositionOffset: {x: 0, y: 0, z: 0}
+    radius: 0.4199995
+    right: {x: 1, y: 0, z: 0}
+    rimColliderGO: {fileID: 0}
+    rimOffset: 0
+    rotationAngle: 0
+    RPM: 0
+    steerAngle: 0
+    up: {x: 0, y: 1, z: 0}
+    visualPositionOffset: {x: 0, y: 0, z: 0}
+    visualRotationOffset: {x: 0, y: 0, z: 0}
+    width: 0.35009217
+    worldPosition: {x: -0.9679021, y: 0.41999972, z: 1.5494412}
+    smoothYPosition: 0
+    prevAngularVelocity: 0
+    worldRotation: {x: 0, y: 0, z: 0, w: 0}
+    nonRotatingVisual: {fileID: 0}
+    visual: {fileID: 2159917320566691305}
+  forwardFriction:
+    force: 0
+    forceCoefficient: 1
+    slip: 0
+    slipCoefficient: 1
+    speed: 0
+  sideFriction:
+    force: 0
+    forceCoefficient: 1
+    slip: 0
+    slipCoefficient: 1
+    speed: 0
+  activeFrictionPreset: {fileID: 11400000, guid: 99d32cdf55d3d6541a201d4e6306e35e,
+    type: 2}
+  applyForceToOthers: 0
+  autoSetupLayerMask: 1
+  debug: 0
+  dragTorque: 10
+  hasHit: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  parent: {fileID: 1729474830761992190}
+  parentNRigidbody: {fileID: 1834199369533421301}
+  parentRigidbody: {fileID: 5476392002664312214}
+  singleRay: 0
+  squat: 0.1
+  useRimCollider: 1
+  vehicleSide: -1
+  vehicleWheelCount: 0
+  visualOnlyUpdate: 0
+  powertrainCounterTorque: 0
+  slipCircleShape: 1.05
+  curveBasedLoadCoefficient: 0
+  loadFrictionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.3431895
+      outSlope: 1.3431895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2000
+      value: 2686.379
+      inSlope: 1.3431895
+      outSlope: 1.3431895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4000
+      value: 4716.7
+      inSlope: 1.0151607
+      outSlope: 1.0151607
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 6000
+      value: 6251.1846
+      inSlope: 0.7672422
+      outSlope: 0.7672422
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 8000
+      value: 7410.9224
+      inSlope: 0.5798689
+      outSlope: 0.5798689
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10000
+      value: 8287.434
+      inSlope: 0.4382556
+      outSlope: 0.4382556
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 12000
+      value: 8949.887
+      inSlope: 0.33122656
+      outSlope: 0.33122656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 14000
+      value: 9450.558
+      inSlope: 0.25033545
+      outSlope: 0.25033545
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 16000
+      value: 9828.956
+      inSlope: 0.18919922
+      outSlope: 0.18919922
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 18000
+      value: 10114.944
+      inSlope: 0.14299414
+      outSlope: 0.14299414
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  depenetrationSpring: 1
+  depenetrationDamping: 1
+  lateralScanResolution: 3
+  longitudinalScanResolution: 8
+  suspensionForceMagnitude: 0
+--- !u!1 &2707771264431633178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322577826157980374}
+  - component: {fileID: 3540263791461176308}
+  m_Layer: 0
+  m_Name: Wheel_4C_F.R_WheelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1322577826157980374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2707771264431633178}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9679002, y: 0.6199997, z: 1.5494412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1964725254}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3540263791461176308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2707771264431633178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc64011ec59d184a9dc2eabf8397a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showAdvancedSettings: 0
+  spring:
+    bottomedOut: 0
+    compressionPercent: 0
+    force: 0
+    forceCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    length: 0
+    maxForce: 8307
+    maxLength: 0.329
+    overExtended: 0
+    prevLength: 0
+    targetPoint: {x: 0, y: 0, z: 0}
+    velocity: 0
+  damper:
+    bumpForce: 1346.0521
+    bumpCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    reboundCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    force: 0
+    reboundForce: 1749.8677
+  wheel:
+    angularVelocity: 0
+    brakeTorque: 0
+    camberAngle: 0
+    camberAtBottom: 0
+    camberAtTop: 0
+    forward: {x: 0, y: 0, z: 1}
+    inertia: 0
+    baseInertia: 0
+    inside: {x: 0, y: 0, z: 0}
+    load: 0
+    mass: 17.333334
+    motorTorque: 0
+    nonRotatingPositionOffset: {x: 0, y: 0, z: 0}
+    radius: 0.4199995
+    right: {x: 1, y: 0, z: 0}
+    rimColliderGO: {fileID: 0}
+    rimOffset: 0
+    rotationAngle: 0
+    RPM: 0
+    steerAngle: 0
+    up: {x: 0, y: 1, z: 0}
+    visualPositionOffset: {x: 0, y: 0, z: 0}
+    visualRotationOffset: {x: 0, y: 0, z: 0}
+    width: 0.35009217
+    worldPosition: {x: 0.9679002, y: 0.41999972, z: 1.5494412}
+    smoothYPosition: 0
+    prevAngularVelocity: 0
+    worldRotation: {x: 0, y: 0, z: 0, w: 0}
+    nonRotatingVisual: {fileID: 0}
+    visual: {fileID: 4010030321805802814}
+  forwardFriction:
+    force: 0
+    forceCoefficient: 1
+    slip: 0
+    slipCoefficient: 1
+    speed: 0
+  sideFriction:
+    force: 0
+    forceCoefficient: 1
+    slip: 0
+    slipCoefficient: 1
+    speed: 0
+  activeFrictionPreset: {fileID: 11400000, guid: 99d32cdf55d3d6541a201d4e6306e35e,
+    type: 2}
+  applyForceToOthers: 0
+  autoSetupLayerMask: 1
+  debug: 0
+  dragTorque: 10
+  hasHit: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  parent: {fileID: 1729474830761992190}
+  parentNRigidbody: {fileID: 1834199369533421301}
+  parentRigidbody: {fileID: 5476392002664312214}
+  singleRay: 0
+  squat: 0.1
+  useRimCollider: 1
+  vehicleSide: 1
+  vehicleWheelCount: 0
+  visualOnlyUpdate: 0
+  powertrainCounterTorque: 0
+  slipCircleShape: 1.05
+  curveBasedLoadCoefficient: 0
+  loadFrictionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.3431895
+      outSlope: 1.3431895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2000
+      value: 2686.379
+      inSlope: 1.3431895
+      outSlope: 1.3431895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4000
+      value: 4716.7
+      inSlope: 1.0151607
+      outSlope: 1.0151607
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 6000
+      value: 6251.1846
+      inSlope: 0.7672422
+      outSlope: 0.7672422
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 8000
+      value: 7410.9224
+      inSlope: 0.5798689
+      outSlope: 0.5798689
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10000
+      value: 8287.434
+      inSlope: 0.4382556
+      outSlope: 0.4382556
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 12000
+      value: 8949.887
+      inSlope: 0.33122656
+      outSlope: 0.33122656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 14000
+      value: 9450.558
+      inSlope: 0.25033545
+      outSlope: 0.25033545
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 16000
+      value: 9828.956
+      inSlope: 0.18919922
+      outSlope: 0.18919922
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 18000
+      value: 10114.944
+      inSlope: 0.14299414
+      outSlope: 0.14299414
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  depenetrationSpring: 1
+  depenetrationDamping: 1
+  lateralScanResolution: 3
+  longitudinalScanResolution: 8
+  suspensionForceMagnitude: 0
 --- !u!1 &3424171964816770915
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +2515,303 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5297448664790293622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2819765177884329069}
+  - component: {fileID: 4191550030071187796}
+  m_Layer: 0
+  m_Name: Wheel_4C_R.R_WheelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2819765177884329069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297448664790293622}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.0179003, y: 0.6199997, z: -1.2505587}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1964725254}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4191550030071187796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297448664790293622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc64011ec59d184a9dc2eabf8397a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showAdvancedSettings: 0
+  spring:
+    bottomedOut: 0
+    compressionPercent: 0
+    force: 0
+    forceCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    length: 0
+    maxForce: 8307
+    maxLength: 0.329
+    overExtended: 0
+    prevLength: 0
+    targetPoint: {x: 0, y: 0, z: 0}
+    velocity: 0
+  damper:
+    bumpForce: 1346.0521
+    bumpCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    reboundCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    force: 0
+    reboundForce: 1749.8677
+  wheel:
+    angularVelocity: 0
+    brakeTorque: 0
+    camberAngle: 0
+    camberAtBottom: 0
+    camberAtTop: 0
+    forward: {x: 0, y: 0, z: 1}
+    inertia: 0
+    baseInertia: 0
+    inside: {x: 0, y: 0, z: 0}
+    load: 0
+    mass: 17.333334
+    motorTorque: 0
+    nonRotatingPositionOffset: {x: 0, y: 0, z: 0}
+    radius: 0.4199995
+    right: {x: 1, y: 0, z: 0}
+    rimColliderGO: {fileID: 0}
+    rimOffset: 0
+    rotationAngle: 0
+    RPM: 0
+    steerAngle: 0
+    up: {x: 0, y: 1, z: 0}
+    visualPositionOffset: {x: 0, y: 0, z: 0}
+    visualRotationOffset: {x: 0, y: 0, z: 0}
+    width: 0.45009217
+    worldPosition: {x: 1.0179003, y: 0.41999972, z: -1.2505587}
+    smoothYPosition: 0
+    prevAngularVelocity: 0
+    worldRotation: {x: 0, y: 0, z: 0, w: 0}
+    nonRotatingVisual: {fileID: 0}
+    visual: {fileID: 5732558572247428515}
+  forwardFriction:
+    force: 0
+    forceCoefficient: 1
+    slip: 0
+    slipCoefficient: 1
+    speed: 0
+  sideFriction:
+    force: 0
+    forceCoefficient: 1
+    slip: 0
+    slipCoefficient: 1
+    speed: 0
+  activeFrictionPreset: {fileID: 11400000, guid: 99d32cdf55d3d6541a201d4e6306e35e,
+    type: 2}
+  applyForceToOthers: 0
+  autoSetupLayerMask: 1
+  debug: 0
+  dragTorque: 10
+  hasHit: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  parent: {fileID: 1729474830761992190}
+  parentNRigidbody: {fileID: 1834199369533421301}
+  parentRigidbody: {fileID: 5476392002664312214}
+  singleRay: 0
+  squat: 0.1
+  useRimCollider: 1
+  vehicleSide: 1
+  vehicleWheelCount: 0
+  visualOnlyUpdate: 0
+  powertrainCounterTorque: 0
+  slipCircleShape: 1.05
+  curveBasedLoadCoefficient: 0
+  loadFrictionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.3431895
+      outSlope: 1.3431895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2000
+      value: 2686.379
+      inSlope: 1.3431895
+      outSlope: 1.3431895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4000
+      value: 4716.7
+      inSlope: 1.0151607
+      outSlope: 1.0151607
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 6000
+      value: 6251.1846
+      inSlope: 0.7672422
+      outSlope: 0.7672422
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 8000
+      value: 7410.9224
+      inSlope: 0.5798689
+      outSlope: 0.5798689
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10000
+      value: 8287.434
+      inSlope: 0.4382556
+      outSlope: 0.4382556
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 12000
+      value: 8949.887
+      inSlope: 0.33122656
+      outSlope: 0.33122656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 14000
+      value: 9450.558
+      inSlope: 0.25033545
+      outSlope: 0.25033545
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 16000
+      value: 9828.956
+      inSlope: 0.18919922
+      outSlope: 0.18919922
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 18000
+      value: 10114.944
+      inSlope: 0.14299414
+      outSlope: 0.14299414
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  depenetrationSpring: 1
+  depenetrationDamping: 1
+  lateralScanResolution: 3
+  longitudinalScanResolution: 8
+  suspensionForceMagnitude: 0
 --- !u!1 &5732558572247428515
 GameObject:
   m_ObjectHideFlags: 0
