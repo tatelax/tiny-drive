@@ -22,8 +22,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
             AnyPlane
         }
 
-        [SerializeField] private bool activateAtStart = true;
-        
         [SerializeField]
         [Tooltip("The coaching goal associated with the coaching overlay.")]
     #if !UNITY_IOS
@@ -109,12 +107,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 return false;
     #endif
             }
-        }
-
-        private void Start()
-        {
-            if(activateAtStart)
-                ActivateCoaching(true);
         }
 
         void OnEnable()

@@ -13,6 +13,7 @@
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.4.8",
     "com.unity.ugui": "1.0.0",
+    "com.unity.uiextensions": "2.2.7",
     "com.unity.xr.arcore": "4.1.7",
     "com.unity.xr.arfoundation": "4.1.7",
     "com.unity.xr.arkit": "4.1.7",
@@ -58,6 +59,13 @@
       "url": "https://npm.cloudsmith.io/jillejr/newtonsoft-json-for-unity",
       "scopes": [
         "jillejr.newtonsoft.json-for-unity"
+      ]
+    },
+    {
+      "name": "npmjs",
+      "url": "https://registry.npmjs.org/",
+      "scopes": [
+        "com.unity.uiextensions"
       ]
     }
   ]

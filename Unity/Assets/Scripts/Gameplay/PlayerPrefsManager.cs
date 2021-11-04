@@ -26,6 +26,11 @@ namespace Gameplay
             PlayerPrefs.SetInt("TutorialCompleted", 1);
         }
 
+        public void UnCompleteTutorial()
+        {
+            PlayerPrefs.SetInt("TutorialCompleted", 0);
+        }
+
         public bool DidCompleteTutorial()
         {
             if (PlayerPrefs.HasKey("TutorialCompleted"))
