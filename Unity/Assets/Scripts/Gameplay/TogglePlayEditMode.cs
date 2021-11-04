@@ -24,6 +24,7 @@ namespace Gameplay
         [SerializeField] private GameObject playModeUI;
         [SerializeField] private VehiclePlacementManager vehiclePlacementManager;
         [SerializeField] private VehicleLoadingManager vehicleLoadingManager;
+        [SerializeField] private PlayerPrefsManager playerPrefsManager;
 
         private bool editMode = false;
 
@@ -65,13 +66,7 @@ namespace Gameplay
 
         private void HandleEnterPlayMode()
         {
-            if (!PlayerPrefs.HasKey("LastVehicle"))
-            {
-                PlayerPrefs.SetInt("LastVehicle", 0);
-            }
-            
-            int lastVehicle = PlayerPrefs.GetInt("LastVehicle");
-            vehiclePlacementManager.PlaceVehicle((Vehicles.VehicleType) lastVehicle);
+            vehiclePlacementManager.PlaceVehicle(playerPrefsManager.VehiclePref);
         }
 
         private void HandleExitPlayMode()

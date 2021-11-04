@@ -1889,7 +1889,7 @@ MonoBehaviour:
       componentInputIsNull: 0
       outputASelector:
         name: Transmission
-      baseEngagementRPM: 780.00006
+      baseEngagementRPM: 1400
       clutchEngagement: 0
       finalEngagementRPM: 2000
       fwdAcceleration: 0

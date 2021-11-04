@@ -11,6 +11,7 @@ namespace Gameplay
     {
         [Header("References")]
         [SerializeField] private VehicleLoadingManager vehicleLoadingManager;
+        [SerializeField] private PlayerPrefsManager playerPrefsManager;
         [SerializeField] private SoundFXManager soundFXManager;
         [SerializeField] private Camera arCamera;
 
@@ -23,6 +24,11 @@ namespace Gameplay
         private bool isPlacing = false;
         public bool IsPlacing => isPlacing;
         public Vehicles.VehicleType LastVehicleType => lastVehicleType;
+
+        public void PlaceVehicle(int type)
+        {
+            PlaceVehicle((Vehicles.VehicleType)type);
+        }
         
         public void PlaceVehicle(Vehicles.VehicleType type)
         {
@@ -30,6 +36,7 @@ namespace Gameplay
             vehicleLoadingManager.Load(type);
             PlaceVehicleEvent?.Invoke();
             lastVehicleType = type;
+            playerPrefsManager.VehiclePref = (int)type;
         }
 
         public void StopPlacing()
