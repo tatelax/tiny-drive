@@ -29,7 +29,7 @@ namespace Gameplay
 
         private void Awake()
         {
-            Toggle(startInEditMode);
+            Toggle(startInEditMode, false);
             
             togglePlayEditButton.onClick.AddListener(Toggle);
         }
@@ -39,7 +39,7 @@ namespace Gameplay
             Toggle(!editMode);
         }
         
-        public void Toggle(bool newEditMode)
+        public void Toggle(bool newEditMode, bool playSound = true)
         {
             editMode = newEditMode;
             editModeUI.SetActive(newEditMode);
@@ -56,8 +56,11 @@ namespace Gameplay
             {
                 HandleEnterPlayMode();
             }
-            
-            soundFXManager.Play(soundFXManager.toggleEditMode);
+
+            if (playSound)
+            {
+                soundFXManager.Play(newEditMode ? soundFXManager.enterEditMode : soundFXManager.exitEditMode);
+            }
         }
 
         private void HandleEnterPlayMode()

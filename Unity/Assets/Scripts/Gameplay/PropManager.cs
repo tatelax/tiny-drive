@@ -110,6 +110,8 @@ namespace Gameplay
 
                 if(shouldPlace)
                     currentlyPlacing = handle.Result;
+                
+                soundFxManager.Play(soundFxManager.propLoad);
             };
         }
 

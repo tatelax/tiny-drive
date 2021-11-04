@@ -10,8 +10,10 @@ namespace Gameplay
         [Header("Sounds")]
         public AudioClip vehicleLoad;
         public AudioClip vehicleRelease;
-        public AudioClip toggleEditMode;
+        public AudioClip enterEditMode;
+        public AudioClip exitEditMode;
         public AudioClip placeProp;
+        public AudioClip propLoad;
         public AudioClip destroyProp;
 
         public void Play(AudioClip audioclip)
