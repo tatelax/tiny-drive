@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 33000012589871054}
   - component: {fileID: 23000013818358562}
   - component: {fileID: 4162444057907538224}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_6A_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,7 +1292,7 @@ GameObject:
   - component: {fileID: 33000011177323842}
   - component: {fileID: 23000010477108338}
   - component: {fileID: 65000012605269006}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_6A_Front_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1469,7 +1469,6 @@ GameObject:
   - component: {fileID: 4000013499266070}
   - component: {fileID: 33000012891702226}
   - component: {fileID: 23000011843874376}
-  - component: {fileID: 64000013119968656}
   m_Layer: 0
   m_Name: Race_Car_6A_Nose
   m_TagString: Untagged
@@ -1541,20 +1540,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000013119968656
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013259638860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300032, guid: f1739643b3dc440c6876db4924d1da08, type: 3}
 --- !u!1 &1000013408270522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,7 +1957,7 @@ GameObject:
   - component: {fileID: 33000013871023084}
   - component: {fileID: 23000011896355414}
   - component: {fileID: 65000010140575232}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_6A_Rear_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

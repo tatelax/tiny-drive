@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 918468101203409865}
   - component: {fileID: 8497283725275588421}
   - component: {fileID: 7234823306897564097}
-  - component: {fileID: 5942011112056549083}
   m_Layer: 0
   m_Name: Suspension_5C_F.L
   m_TagString: Untagged
@@ -83,20 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5942011112056549083
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305006550937690279}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300020, guid: 1ce33a5fc4a9d439fb1d67b47d1ac767, type: 3}
 --- !u!1 &358634690266777987
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,8 +94,7 @@ GameObject:
   - component: {fileID: 230327968228879397}
   - component: {fileID: 3408872666235338355}
   - component: {fileID: 1336828909682931519}
-  - component: {fileID: 2735581402959401825}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_5C_Rear_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,19 +166,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1336828909682931519
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 358634690266777987}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.3039742, y: 0.7921994, z: 0.6327726}
-  m_Center: {x: 0, y: -0.000000029802322, z: -0.00000011920929}
---- !u!65 &2735581402959401825
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -705,7 +676,6 @@ GameObject:
   - component: {fileID: 3319075543317991611}
   - component: {fileID: 4221381203363642489}
   - component: {fileID: 7138390845863628406}
-  - component: {fileID: 6611749590852156365}
   m_Layer: 0
   m_Name: Race_Car_5C_Nose
   m_TagString: Untagged
@@ -777,20 +747,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6611749590852156365
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668415703778557714}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300032, guid: 1ce33a5fc4a9d439fb1d67b47d1ac767, type: 3}
 --- !u!1 &1755514232961724182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,7 +1370,7 @@ GameObject:
   - component: {fileID: 2457228957770091747}
   - component: {fileID: 9115545674662449728}
   - component: {fileID: 6313928670042582496}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_5C_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2082,7 +2038,7 @@ GameObject:
   - component: {fileID: 8908201622072730214}
   - component: {fileID: 3116276480878638064}
   - component: {fileID: 2424128379790101162}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_5C_Front_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -578,7 +578,6 @@ GameObject:
   - component: {fileID: 7997269444809759008}
   - component: {fileID: 1381037334885549288}
   - component: {fileID: 1802769944669000239}
-  - component: {fileID: 5990962942375224069}
   m_Layer: 0
   m_Name: Rally_Car_3C_Spoiler
   m_TagString: Untagged
@@ -649,20 +648,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5990962942375224069
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7621947838393682271}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300024, guid: 6ed0208f3808246f690c40c973118283, type: 3}
 --- !u!1 &7770357202670896935
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +740,6 @@ GameObject:
   - component: {fileID: 7466816006062460241}
   - component: {fileID: 7532426283351491781}
   - component: {fileID: 5752460767611937657}
-  - component: {fileID: 3543017732876264535}
   m_Layer: 0
   m_Name: Rally_Car_3C_Front_Skirt
   m_TagString: Untagged
@@ -826,20 +810,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3543017732876264535
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8909789731465237523}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300030, guid: 6ed0208f3808246f690c40c973118283, type: 3}
 --- !u!1 &8933215184210223700
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +821,8 @@ GameObject:
   - component: {fileID: 2101863934}
   - component: {fileID: 6237447461511608510}
   - component: {fileID: 791321136190451240}
-  m_Layer: 0
+  - component: {fileID: 5097909677140631254}
+  m_Layer: 2
   m_Name: Rally_Car_3C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,3 +902,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5097909677140631254
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8933215184210223700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3343868, y: 1.6107414, z: 4.792716}
+  m_Center: {x: 0, y: 1.0362651, z: 0.24884999}

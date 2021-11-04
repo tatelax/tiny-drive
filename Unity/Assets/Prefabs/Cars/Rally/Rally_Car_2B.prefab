@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4000010485342704}
   - component: {fileID: 33000014218295762}
   - component: {fileID: 23000010455258422}
-  - component: {fileID: 64000014135872638}
   m_Layer: 0
   m_Name: Rally_Car_2B_Lights
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000014135872638
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010151851620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300018, guid: 1e0b0afe7b98a43a7bc6582f9ad18612, type: 3}
 --- !u!1 &1000010421605520
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +255,7 @@ GameObject:
   - component: {fileID: 33000011011652696}
   - component: {fileID: 23000013038462302}
   - component: {fileID: 3979056329766576844}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rally_Car_2B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +359,6 @@ GameObject:
   - component: {fileID: 4000010138463322}
   - component: {fileID: 33000013588770900}
   - component: {fileID: 23000012355068974}
-  - component: {fileID: 64000012388963312}
   m_Layer: 0
   m_Name: Rally_Car_2B_Front_Skirt
   m_TagString: Untagged
@@ -446,20 +430,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000012388963312
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010730249780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1e0b0afe7b98a43a7bc6582f9ad18612, type: 3}
 --- !u!1 &1000011208492232
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +765,6 @@ GameObject:
   - component: {fileID: 4000012504322978}
   - component: {fileID: 33000012265390894}
   - component: {fileID: 23000011746012838}
-  - component: {fileID: 64000012291109128}
   m_Layer: 0
   m_Name: Rally_Car_2B_Spoiler
   m_TagString: Untagged
@@ -867,20 +836,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000012291109128
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012493272128}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 1e0b0afe7b98a43a7bc6582f9ad18612, type: 3}
 --- !u!1 &1000013181761384
 GameObject:
   m_ObjectHideFlags: 0

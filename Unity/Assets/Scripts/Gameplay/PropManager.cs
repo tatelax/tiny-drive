@@ -130,7 +130,7 @@ namespace Gameplay
                 {
                     rbParent.isKinematic = false;
                     rbParent.constraints = RigidbodyConstraints.None;
-                }
+                } 
                 
                 for (int i = 0; i < objToPlace.transform.childCount; i++)
                 {

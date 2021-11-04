@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 33000011217989658}
   - component: {fileID: 23000013724434786}
   - component: {fileID: 5677268631459080428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rally_Car_1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,6 @@ GameObject:
   - component: {fileID: 4000011828522946}
   - component: {fileID: 33000010047298418}
   - component: {fileID: 23000013993259772}
-  - component: {fileID: 64000010256796416}
   m_Layer: 0
   m_Name: Rally_Car_1A_Front_Skirt
   m_TagString: Untagged
@@ -593,20 +592,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000010256796416
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012148698100}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300010, guid: 0a8561d5627f24a0ca917661a4fe6d75, type: 3}
 --- !u!1 &1000012380077972
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,7 +766,7 @@ GameObject:
   - component: {fileID: 33000013052643298}
   - component: {fileID: 23000014021297832}
   - component: {fileID: 65000014097289732}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rally_Car_1A_Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +941,6 @@ GameObject:
   - component: {fileID: 4000010808397250}
   - component: {fileID: 33000012910558080}
   - component: {fileID: 23000013211538732}
-  - component: {fileID: 64000010725088382}
   m_Layer: 0
   m_Name: Rally_Car_1A_Spoiler
   m_TagString: Untagged
@@ -1027,17 +1011,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000010725088382
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013734908026}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300016, guid: 0a8561d5627f24a0ca917661a4fe6d75, type: 3}

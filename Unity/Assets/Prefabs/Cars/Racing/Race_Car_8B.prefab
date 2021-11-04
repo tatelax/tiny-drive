@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000011390052094
 MeshFilter:
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 33000011016659708}
   - component: {fileID: 23000010926479928}
   - component: {fileID: 65000013280544906}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_8B_Front_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.29143873, z: 3.0288007}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000012101446014}
   m_Father: {fileID: 4000010636582580}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -363,12 +364,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000011263605424}
-  m_LocalRotation: {x: -0.000000059604645, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.29143876, z: 3.0288007}
+  m_LocalRotation: {x: -0.000000059604645, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 3
+  m_Father: {fileID: 4000011709072344}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000010166566848
 MeshFilter:
@@ -530,7 +531,6 @@ Transform:
   - {fileID: 4000011647655850}
   - {fileID: 4000012110359206}
   - {fileID: 4000011709072344}
-  - {fileID: 4000012101446014}
   - {fileID: 4000010864590172}
   - {fileID: 4000012687839716}
   - {fileID: 4000010979025376}
@@ -656,7 +656,7 @@ Transform:
   m_Children:
   - {fileID: 4000013123887340}
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000011947295822
 MeshFilter:
@@ -818,7 +818,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000010430245954
 MeshFilter:
@@ -900,7 +900,7 @@ Transform:
   m_Children:
   - {fileID: 4000012933680402}
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000012776168714
 MeshFilter:
@@ -1144,7 +1144,7 @@ Transform:
   m_Children:
   - {fileID: 4000010856114160}
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000014238346202
 MeshFilter:
@@ -1306,7 +1306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000014071878634
 MeshFilter:
@@ -1369,7 +1369,7 @@ GameObject:
   - component: {fileID: 33000011281284716}
   - component: {fileID: 23000012798326424}
   - component: {fileID: 65000011829760062}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_8B_Rear_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1389,7 +1389,7 @@ Transform:
   m_Children:
   - {fileID: 4000013333478232}
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000011281284716
 MeshFilter:
@@ -1464,7 +1464,6 @@ GameObject:
   - component: {fileID: 4000010864590172}
   - component: {fileID: 33000013454868498}
   - component: {fileID: 23000014069336534}
-  - component: {fileID: 64000011476647268}
   m_Layer: 0
   m_Name: Race_Car_8B_Nose
   m_TagString: Untagged
@@ -1485,7 +1484,7 @@ Transform:
   m_Children:
   - {fileID: 4000013768117438}
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000013454868498
 MeshFilter:
@@ -1536,20 +1535,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000011476647268
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013402526304}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300046, guid: 4a7c3e2e6d9224f8e8490f0b7e2a8c8c, type: 3}
 --- !u!1 &1000013702375698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1709,7 @@ GameObject:
   - component: {fileID: 33000011266021116}
   - component: {fileID: 23000014006266318}
   - component: {fileID: 1351297442040043554}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_8B_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +1827,7 @@ Transform:
   m_Children:
   - {fileID: 4000013950084592}
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000010554175606
 MeshFilter:
@@ -2086,7 +2071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000010636582580}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000011309769558
 MeshFilter:

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000013312453764}
   - component: {fileID: 23000013798633402}
   - component: {fileID: 8189093974943577684}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rally_Car_1B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,6 @@ GameObject:
   - component: {fileID: 4000012495779866}
   - component: {fileID: 33000012713649680}
   - component: {fileID: 23000012291215374}
-  - component: {fileID: 64000012613141440}
   m_Layer: 0
   m_Name: Rally_Car_1B_Spoiler
   m_TagString: Untagged
@@ -268,20 +267,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000012613141440
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010599224856}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300016, guid: 0a8561d5627f24a0ca917661a4fe6d75, type: 3}
 --- !u!1 &1000010714168828
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +359,6 @@ GameObject:
   - component: {fileID: 4000014125475696}
   - component: {fileID: 33000011414050558}
   - component: {fileID: 23000010433510564}
-  - component: {fileID: 64000013180913970}
   m_Layer: 0
   m_Name: Rally_Car_1B_Front_Skirt
   m_TagString: Untagged
@@ -446,20 +430,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000013180913970
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010987336412}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300010, guid: 0a8561d5627f24a0ca917661a4fe6d75, type: 3}
 --- !u!1 &1000011078875342
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +442,7 @@ GameObject:
   - component: {fileID: 33000010417941598}
   - component: {fileID: 23000011494892876}
   - component: {fileID: 65000012640194678}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rally_Car_1B_Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}

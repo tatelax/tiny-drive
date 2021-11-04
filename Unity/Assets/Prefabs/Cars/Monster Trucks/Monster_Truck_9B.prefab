@@ -336,6 +336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2112431409}
+  - component: {fileID: 6567812751315794950}
   m_Layer: 0
   m_Name: Monster_Truck_9B
   m_TagString: Untagged
@@ -362,6 +363,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6567812751315794950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2360277923316073528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c00fa9caacac8341a086aee6c939e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addCamera: 1
+  addCharacterEnterExitPoints: 1
+  addCollider: 0
+  bodyMeshGameObject: {fileID: 0}
+  wheelGameObjects: []
+  removeWizardOnComplete: 1
+  preset: {fileID: 11400000, guid: b81e65edf7272da47823ca76bff63ac0, type: 2}
 --- !u!1 &2574706850730979175
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +803,7 @@ GameObject:
   - component: {fileID: 8243356506344366395}
   - component: {fileID: 2030114035035349007}
   - component: {fileID: 9149234565642086895}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Monster_Truck_9B_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000014049056190}
   - component: {fileID: 23000010663170226}
   - component: {fileID: 6016669485808002925}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_7B_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000010188297234
 MeshFilter:
@@ -373,7 +373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000013158843242
 MeshFilter:
@@ -455,7 +455,7 @@ Transform:
   m_Children:
   - {fileID: 4000010438609978}
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000011882195572
 MeshFilter:
@@ -618,7 +618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000013083335458
 MeshFilter:
@@ -694,12 +694,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000011862775746}
-  m_LocalRotation: {x: -0.000000059604645, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.29143876, z: 3.0288007}
+  m_LocalRotation: {x: -0.000000059604645, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 3
+  m_Father: {fileID: 4000012541150214}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000014256741860
 MeshFilter:
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 33000010526105168}
   - component: {fileID: 23000012897784596}
   - component: {fileID: 65000012409296524}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_7B_Rear_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ Transform:
   m_Children:
   - {fileID: 4000010702420756}
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000010526105168
 MeshFilter:
@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 33000011632182692}
   - component: {fileID: 23000011859137608}
   - component: {fileID: 65000011407280130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Race_Car_7B_Front_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +956,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.29143873, z: 3.0288007}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000013914196462}
   m_Father: {fileID: 4000013123868624}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1053,7 +1054,7 @@ Transform:
   m_Children:
   - {fileID: 4000012632657124}
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000011728355012
 MeshFilter:
@@ -1115,7 +1116,6 @@ GameObject:
   - component: {fileID: 4000012470255182}
   - component: {fileID: 33000010142096728}
   - component: {fileID: 23000013937416244}
-  - component: {fileID: 64000013883177022}
   m_Layer: 0
   m_Name: Race_Car_7B_Nose
   m_TagString: Untagged
@@ -1136,7 +1136,7 @@ Transform:
   m_Children:
   - {fileID: 4000012500626686}
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000010142096728
 MeshFilter:
@@ -1187,20 +1187,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64000013883177022
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012824034408}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300052, guid: 29c6ae520f42149d8b6ec18d9849e315, type: 3}
 --- !u!1 &1000013079792330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1218,7 @@ Transform:
   m_Children:
   - {fileID: 4000013611785340}
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000010532529530
 MeshFilter:
@@ -1314,7 +1300,7 @@ Transform:
   m_Children:
   - {fileID: 4000010041227504}
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000012079803888
 MeshFilter:
@@ -1801,7 +1787,6 @@ Transform:
   - {fileID: 4000013126685446}
   - {fileID: 4000013667392508}
   - {fileID: 4000012541150214}
-  - {fileID: 4000013914196462}
   - {fileID: 4000012470255182}
   - {fileID: 4000013203360292}
   - {fileID: 4000012640460314}
@@ -1926,7 +1911,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000013123868624}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000013615659868
 MeshFilter:

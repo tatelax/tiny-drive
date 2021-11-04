@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 7304481494994536811}
   - component: {fileID: 4862288309769064981}
   - component: {fileID: 1026981511611970323}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Monster_Truck_10A_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
