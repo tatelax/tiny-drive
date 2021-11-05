@@ -10,8 +10,8 @@ namespace UI
     {
         [SerializeField] string propAddress;
 
+        public PointerTrackingButton PointerTrackingButton;
         public string PropAddress => propAddress;
-        public PointerTrackingButton PointerTrackingButton { get; private set; }
 
         private void Awake()
         {

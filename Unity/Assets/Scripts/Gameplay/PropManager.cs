@@ -37,6 +37,7 @@ namespace Gameplay
         
         private void Start()
         {
+            
             spawnedProps = new Dictionary<GameObject, string>();
 
             propSpawnButtons = propSpawnButtonsHolder.GetComponentsInChildren<PropSpawnButtonData>();
@@ -44,6 +45,10 @@ namespace Gameplay
             for (int i = 0; i < propSpawnButtons.Length; i++)
             {
                 PropSpawnButtonData button = propSpawnButtons[i];
+                
+                if (button.PointerTrackingButton == null)
+                    button.PointerTrackingButton = button.gameObject.GetComponent<PointerTrackingButton>();
+
                 button.PointerTrackingButton.OnDragStart += () =>
                 {
                     propSpawnScrollRect.vertical = false;
@@ -108,6 +113,8 @@ namespace Gameplay
                     }
                 }
 
+                handle.Result.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+                
                 if(shouldPlace)
                     currentlyPlacing = handle.Result;
                 
@@ -140,6 +147,8 @@ namespace Gameplay
                         rbChild.constraints = RigidbodyConstraints.None;
                     }
                 }
+
+                objToPlace.layer = LayerMask.NameToLayer("Default");
                 
                 soundFxManager.Play(soundFxManager.placeProp);
                 objToPlace = null;
@@ -183,6 +192,8 @@ namespace Gameplay
                 rb.isKinematic = true;
                 rb.constraints = RigidbodyConstraints.FreezeRotation;
 
+                selectedObj.layer = LayerMask.NameToLayer("Ignore Raycast");
+                
                 selectedObj.transform.DOMoveY(selectedObj.transform.position.y + 2, animSpeed).SetEase(easeType).onComplete +=
                     () =>
                     {

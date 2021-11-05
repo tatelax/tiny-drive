@@ -1,3 +1,4 @@
+using AR;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,10 +13,13 @@ namespace Gameplay
         [SerializeField] private PlayerPrefsManager playerPrefsManager;
         [SerializeField] private ARKitCoachingOverlay coachingOverlay;
         [SerializeField] private Button completeTutorialButton;
-
+        [SerializeField] private ToggleUIWhenCoaching toggleUIWhenCoaching;
+        
         private void Awake()
         {
             completeTutorialButton.onClick.AddListener(CompleteTutorial);
+            coachingOverlay.enabled = false;
+            toggleUIWhenCoaching.enabled = false;
             
             if (!playerPrefsManager.DidCompleteTutorial())
             {
@@ -35,6 +39,8 @@ namespace Gameplay
         private void CompleteTutorial()
         {
             tutorialPanel.SetActive(false);
+            toggleUIWhenCoaching.enabled = true;
+            coachingOverlay.enabled = true;
             coachingOverlay.ActivateCoaching(true);
             playerPrefsManager.CompleteTutorial();
             Debug.Log("Completed tutorial");
