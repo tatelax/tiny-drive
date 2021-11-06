@@ -13,6 +13,9 @@ namespace Gameplay
 {
     public class PropManager : MonoBehaviour
     {
+        [Header("Settings")]
+        [SerializeField] private int maxProps;
+        
         [Header("References")]
         [SerializeField] private Transform propSpawnParent;
         [SerializeField] private ScrollRect propSpawnScrollRect;
@@ -35,9 +38,9 @@ namespace Gameplay
         public Dictionary<GameObject, string> SpawnedProps => spawnedProps;
         public GameObject CurrentlyPlacing => currentlyPlacing;
         
+
         private void Start()
         {
-            
             spawnedProps = new Dictionary<GameObject, string>();
 
             propSpawnButtons = propSpawnButtonsHolder.GetComponentsInChildren<PropSpawnButtonData>();
@@ -61,7 +64,12 @@ namespace Gameplay
                 button.PointerTrackingButton.OnDragStop += () =>
                 {
                     propSpawnScrollRect.vertical = true;
-                    SetButtonsInteractable(true);
+
+                    if (spawnedProps.Count < maxProps)
+                    {
+                        SetButtonsInteractable(true, false);
+                    }
+                    
                     PlaceObject();
                 };
             }
@@ -70,16 +78,6 @@ namespace Gameplay
             
             deleteButton.onClick.AddListener(DeletePropButton);
             confirmButton.onClick.AddListener(ConfirmPlacePropButton);
-        }
-
-        private void SetButtonsInteractable(bool state)
-        {
-            for (var i = 0; i < propSpawnButtons.Length; i++)
-            {
-                propSpawnButtons[i].PointerTrackingButton.interactable = state;
-            }
-
-            toggleEditModeButton.interactable = state;
         }
 
         private void Update()
@@ -96,6 +94,13 @@ namespace Gameplay
             Addressables.InstantiateAsync(propAddress, position, rotation, propSpawnParent).Completed += handle =>
             {
                 spawnedProps.Add(handle.Result, propAddress);
+
+                if (spawnedProps.Count >= maxProps)
+                {
+                    SetButtonsInteractable(false, false);
+                    Debug.Log("Max Props Reached");
+                }
+                
                 isLoading = false;
 
                 if (handle.Result.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))
@@ -248,6 +253,11 @@ namespace Gameplay
             Addressables.ReleaseInstance(obj);
             spawnedProps.Remove(obj);
             soundFxManager.Play(soundFxManager.destroyProp);
+
+            if (spawnedProps.Count < maxProps)
+            {
+                SetButtonsInteractable(true, false);
+            }
         }
 
         public void ClearAllProps()
@@ -276,6 +286,17 @@ namespace Gameplay
         private void ToggleEditUI(bool setting)
         {
             editUIParent.SetActive(setting);
+        }
+        
+        private void SetButtonsInteractable(bool state, bool togglEditButton = true)
+        {
+            for (var i = 0; i < propSpawnButtons.Length; i++)
+            {
+                propSpawnButtons[i].PointerTrackingButton.interactable = state;
+            }
+
+            if(togglEditButton)
+                toggleEditModeButton.interactable = state;
         }
     }
 }
