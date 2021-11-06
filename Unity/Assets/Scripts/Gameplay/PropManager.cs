@@ -115,6 +115,11 @@ namespace Gameplay
 
                 handle.Result.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                 
+                for (int i = 0; i < handle.Result.transform.childCount; i++)
+                {
+                    handle.Result.transform.GetChild(i).gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+                }
+                
                 if(shouldPlace)
                     currentlyPlacing = handle.Result;
                 
@@ -149,6 +154,11 @@ namespace Gameplay
                 }
 
                 objToPlace.layer = LayerMask.NameToLayer("Default");
+                
+                for (int i = 0; i < objToPlace.transform.childCount; i++)
+                {
+                    objToPlace.transform.GetChild(i).gameObject.layer = LayerMask.NameToLayer("Default");
+                }         
                 
                 soundFxManager.Play(soundFxManager.placeProp);
                 objToPlace = null;
@@ -193,6 +203,11 @@ namespace Gameplay
                 rb.constraints = RigidbodyConstraints.FreezeRotation;
 
                 selectedObj.layer = LayerMask.NameToLayer("Ignore Raycast");
+                
+                for (int i = 0; i < selectedObj.transform.childCount; i++)
+                {
+                    selectedObj.transform.GetChild(i).gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+                }  
                 
                 selectedObj.transform.DOMoveY(selectedObj.transform.position.y + 2, animSpeed).SetEase(easeType).onComplete +=
                     () =>
