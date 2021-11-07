@@ -53,6 +53,11 @@ namespace Gameplay
 
         public void Destroy()
         {
+            if (!currVehicle)
+            {
+                return;
+            }
+            
             Addressables.ReleaseInstance(currVehicle);
             currVehicle = null;
             

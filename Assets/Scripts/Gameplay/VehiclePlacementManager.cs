@@ -43,7 +43,6 @@ namespace Gameplay
         {
             if (!isPlacing)
             {
-                Debug.LogWarning("Not placing.");
                 return;
             }
             

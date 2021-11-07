@@ -64,13 +64,16 @@ namespace Gameplay
                 button.PointerTrackingButton.OnDragStop += () =>
                 {
                     propSpawnScrollRect.vertical = true;
+                    PlaceObject();
 
                     if (spawnedProps.Count < maxProps)
                     {
-                        SetButtonsInteractable(true, false);
+                        SetButtonsInteractable(true);
                     }
-                    
-                    PlaceObject();
+                    else
+                    {
+                        toggleEditModeButton.interactable = true;
+                    }
                 };
             }
             
@@ -95,12 +98,6 @@ namespace Gameplay
             {
                 spawnedProps.Add(handle.Result, propAddress);
 
-                if (spawnedProps.Count >= maxProps)
-                {
-                    SetButtonsInteractable(false, false);
-                    Debug.Log("Max Props Reached");
-                }
-                
                 isLoading = false;
 
                 if (handle.Result.transform.TryGetComponent<Rigidbody>(out Rigidbody rbParent))
@@ -127,6 +124,12 @@ namespace Gameplay
                 
                 if(shouldPlace)
                     currentlyPlacing = handle.Result;
+                
+                if (spawnedProps.Count >= maxProps)
+                {
+                    SetButtonsInteractable(false);
+                    Debug.Log("Max Props Reached");
+                }
                 
                 soundFxManager.Play(soundFxManager.propLoad);
             };
@@ -256,7 +259,7 @@ namespace Gameplay
 
             if (spawnedProps.Count < maxProps)
             {
-                SetButtonsInteractable(true, false);
+                SetButtonsInteractable(true);
             }
         }
 
@@ -288,15 +291,14 @@ namespace Gameplay
             editUIParent.SetActive(setting);
         }
         
-        private void SetButtonsInteractable(bool state, bool togglEditButton = true)
+        private void SetButtonsInteractable(bool state)
         {
             for (var i = 0; i < propSpawnButtons.Length; i++)
             {
                 propSpawnButtons[i].PointerTrackingButton.interactable = state;
             }
 
-            if(togglEditButton)
-                toggleEditModeButton.interactable = state;
+            toggleEditModeButton.interactable = state;
         }
     }
 }

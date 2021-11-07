@@ -22,6 +22,7 @@ namespace Gameplay
         [SerializeField] private Image toggleButtonBg;
         [SerializeField] private GameObject editModeUI;
         [SerializeField] private GameObject playModeUI;
+        [SerializeField] private GameObject toggleButtonUI;
         [SerializeField] private VehiclePlacementManager vehiclePlacementManager;
         [SerializeField] private VehicleLoadingManager vehicleLoadingManager;
         [SerializeField] private PlayerPrefsManager playerPrefsManager;
@@ -32,6 +33,7 @@ namespace Gameplay
         {
 #if UNITY_EDITOR
             Debug.Log("Auto enabled UI because we're in the editor where finishing coaching isnt possible.");
+            toggleButtonUI.SetActive(true);
             Toggle(startInEditMode, false);
 #endif
             

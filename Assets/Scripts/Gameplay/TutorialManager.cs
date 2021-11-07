@@ -40,8 +40,13 @@ namespace Gameplay
         {
             tutorialPanel.SetActive(false);
             toggleUIWhenCoaching.enabled = true;
-            coachingOverlay.enabled = true;
-            coachingOverlay.ActivateCoaching(true);
+            
+            if(coachingOverlay.supported)
+            {
+                coachingOverlay.enabled = true;
+                coachingOverlay.ActivateCoaching(true);
+            }
+
             playerPrefsManager.CompleteTutorial();
             Debug.Log("Completed tutorial");
         }
