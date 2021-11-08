@@ -63,6 +63,7 @@ namespace UI
             base.OnPointerDown(eventData);
 
             if (!Application.isPlaying) return;
+            if(!interactable) return;
 
             fingerPosOnDown = eventData.position;
             isHoldingDownButton = true;
@@ -74,7 +75,7 @@ namespace UI
             base.OnPointerUp(eventData);
             
             if (!Application.isPlaying) return;
-            
+
             isHoldingDownButton = false;
             didInvoke = false;
             currHoldDownTime = 0;

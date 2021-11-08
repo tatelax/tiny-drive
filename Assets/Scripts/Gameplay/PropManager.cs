@@ -199,16 +199,19 @@ namespace Gameplay
             if (!Pointer.current.press.wasPressedThisFrame) return;
 
             Ray ray = mainCamera.ScreenPointToRay(Pointer.current.position.ReadValue());
-
+Debug.Log("casting");
             if (Physics.Raycast(ray, out var hit))
             {
+Debug.Log("ray");
                 if (!spawnedProps.ContainsKey(hit.transform.gameObject)) return;
-
+Debug.Log("valid");
                 GameObject selectedObj = hit.transform.gameObject;
 
-                Rigidbody rb = selectedObj.GetComponent<Rigidbody>();
-                rb.isKinematic = true;
-                rb.constraints = RigidbodyConstraints.FreezeRotation;
+                if (selectedObj.TryGetComponent<Rigidbody>(out Rigidbody rb))
+                {
+                    rb.isKinematic = true;
+                    rb.constraints = RigidbodyConstraints.FreezeRotation;
+                }
 
                 selectedObj.layer = LayerMask.NameToLayer("Ignore Raycast");
                 

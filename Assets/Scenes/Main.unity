@@ -1307,7 +1307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2460, y: 0}
+  m_AnchoredPosition: {x: 2250, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &61685350
@@ -5214,7 +5214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1230
+  m_MinWidth: 1125
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -12650,7 +12650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1230
+  m_MinWidth: 1125
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -13058,7 +13058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118f561c449fc4ed18da72bf8a27b59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxProps: 2
+  maxProps: 8
   propSpawnParent: {fileID: 1087304027}
   propSpawnScrollRect: {fileID: 1377771118}
   propSpawnButtonsHolder: {fileID: 790523560}
@@ -13140,6 +13140,7 @@ MonoBehaviour:
   toggleButtonBg: {fileID: 1403725158}
   editModeUI: {fileID: 1095288015}
   playModeUI: {fileID: 708309263}
+  toggleButtonUI: {fileID: 1868768670}
   vehiclePlacementManager: {fileID: 1261135523}
   vehicleLoadingManager: {fileID: 1261135524}
   playerPrefsManager: {fileID: 1261135533}
@@ -13729,7 +13730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1230
+  m_MinWidth: 1125
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -20051,7 +20052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1230
+  m_MinWidth: 1125
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -21566,7 +21567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 1230
+  m_MinWidth: 1125
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
