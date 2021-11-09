@@ -226,6 +226,7 @@ namespace Gameplay
                     {
                         currentlyPlacing = hit.transform.gameObject;
                         ToggleEditUI(true);
+                        SetButtonsInteractable(false);
                         soundFxManager.Play(soundFxManager.placeProp);
                     };
 
