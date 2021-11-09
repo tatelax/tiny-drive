@@ -298,7 +298,7 @@ namespace Gameplay
         private void ConfirmPlacePropButton()
         {
             PlaceObject();
-            //ToggleEditUI(false);
+            ToggleEditUI(false);
             toggleEditModeButton.interactable = true;
         }
 

@@ -33,11 +33,11 @@ namespace Gameplay
         
         private void Awake()
         {
-#if UNITY_EDITOR
-            Debug.Log("Auto enabled UI because we're in the editor where finishing coaching isnt possible.");
+//#if UNITY_EDITOR
+            //Debug.Log("Auto enabled UI because we're in the editor where finishing coaching isnt possible.");
             toggleButtonUI.SetActive(true);
             Toggle(startInEditMode, false);
-#endif
+//#endif
             
             togglePlayEditButton.onClick.AddListener(Toggle);
         }
