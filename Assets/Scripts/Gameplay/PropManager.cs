@@ -29,6 +29,7 @@ namespace Gameplay
         [SerializeField] private Button deleteButton;
         [SerializeField] private GameObject[] uiToIgnoreWhenRaycasting;
         [SerializeField] private SoundFXManager soundFxManager;
+        [SerializeField] private TogglePlayEditMode togglePlayEditMode;
         
         private PropSpawnButtonData[] propSpawnButtons;
         private Dictionary<GameObject, string> spawnedProps; //key: gameobject itself | value: proptype enum
@@ -196,15 +197,15 @@ namespace Gameplay
         private void HandleEditingExisting()
         {
             if (currentlyPlacing) return;
+            if (!togglePlayEditMode.EditMode) return;
             if (!Pointer.current.press.wasPressedThisFrame) return;
 
             Ray ray = mainCamera.ScreenPointToRay(Pointer.current.position.ReadValue());
-Debug.Log("casting");
+
             if (Physics.Raycast(ray, out var hit))
             {
-Debug.Log("ray");
                 if (!spawnedProps.ContainsKey(hit.transform.gameObject)) return;
-Debug.Log("valid");
+
                 GameObject selectedObj = hit.transform.gameObject;
 
                 if (selectedObj.TryGetComponent<Rigidbody>(out Rigidbody rb))
@@ -227,6 +228,8 @@ Debug.Log("valid");
                         ToggleEditUI(true);
                         soundFxManager.Play(soundFxManager.placeProp);
                     };
+
+                toggleEditModeButton.interactable = false;
             }
         }
         
@@ -256,6 +259,12 @@ Debug.Log("valid");
 
         private void DestroyProp(GameObject obj)
         {
+            if (obj == null)
+            {
+                Debug.LogError("Obj was null!");
+                return;
+            }
+
             Addressables.ReleaseInstance(obj);
             spawnedProps.Remove(obj);
             soundFxManager.Play(soundFxManager.destroyProp);
@@ -264,6 +273,8 @@ Debug.Log("valid");
             {
                 SetButtonsInteractable(true);
             }
+
+            toggleEditModeButton.interactable = true;
         }
 
         public void ClearAllProps()
@@ -286,7 +297,8 @@ Debug.Log("valid");
         private void ConfirmPlacePropButton()
         {
             PlaceObject();
-            ToggleEditUI(false);
+            //ToggleEditUI(false);
+            toggleEditModeButton.interactable = true;
         }
 
         private void ToggleEditUI(bool setting)

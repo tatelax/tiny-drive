@@ -29,6 +29,8 @@ namespace Gameplay
 
         private bool editMode = false;
 
+        public bool EditMode => editMode;
+        
         private void Awake()
         {
 #if UNITY_EDITOR
