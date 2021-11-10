@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -19,7 +20,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         
         ARPlane m_ARPlane;
         MeshRenderer m_PlaneMeshRenderer;
-        TextMesh m_TextMesh;
+        TextMeshPro m_TextMesh;
         GameObject m_TextObj;
         Vector3 m_TextFlipVec = new Vector3(0, 180, 0);
 
@@ -30,9 +31,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
             // Setup label
             m_TextObj = new GameObject();
-            m_TextMesh = m_TextObj.AddComponent<TextMesh>();
-            m_TextMesh.characterSize = textSize;
+            m_TextMesh = m_TextObj.AddComponent<TextMeshPro>();
+            m_TextMesh.fontSize = textSize;
             m_TextMesh.color = Color.black;
+            m_TextMesh.alignment = TextAlignmentOptions.Center;
+            m_TextMesh.fontStyle = FontStyles.Bold;
         }
 
         void Update()
