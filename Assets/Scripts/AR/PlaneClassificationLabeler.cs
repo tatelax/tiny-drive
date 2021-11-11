@@ -25,7 +25,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         Vector3 m_TextFlipVec = new Vector3(0, 180, 0);
 
         void Awake()
-        {
+        { 
             m_ARPlane = GetComponent<ARPlane>();
             m_PlaneMeshRenderer = GetComponent<MeshRenderer>();
 
