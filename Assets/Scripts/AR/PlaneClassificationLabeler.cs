@@ -47,7 +47,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
         void UpdateLabel()
         {
             // Update text
-            m_TextMesh.text = m_ARPlane.classification.ToString();
+            string classification = m_ARPlane.classification.ToString();
+
+            if (classification == "None")
+            {
+                classification = "Object";
+            }
+            
+            m_TextMesh.text = classification;
 
             // Update Pose
             m_TextObj.transform.position = m_ARPlane.center;

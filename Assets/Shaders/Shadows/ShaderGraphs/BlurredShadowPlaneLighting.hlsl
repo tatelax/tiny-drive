@@ -3,7 +3,7 @@ void MainLightBlurShadow_half(half rand, half fadeTightness, SamplerState pointC
 #if SHADERGRAPH_PREVIEW
 	shadowAtten = 1;
 #else
-	const int NUM_STEPS = 10;
+	const int NUM_STEPS = 5;
 	float oneDivNumSteps = 1.0 / NUM_STEPS;
 	Light mainLight = GetMainLight();
 	shadowAtten = 1;
